@@ -1,2 +1,4 @@
 bindkey jk vi-cmd-mode
 
+# testing to see if git tracks changes to this file
+
