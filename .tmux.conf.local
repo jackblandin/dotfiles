@@ -1,0 +1,5 @@
+# Add your local tmux config here
+set-option -g prefix C-Space
+unbind-key C-Space
+bind-key C-Space send-prefix
+set -g base-index 1
