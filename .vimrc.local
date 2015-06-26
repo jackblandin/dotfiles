@@ -43,3 +43,4 @@ autocmd BufRead,BufNewFile *.dev setfiletype nginx
 autocmd BufRead,BufNewFile /Users/jackblandin/tc/dockerfiles/*.conf setfiletype nginx
 autocmd BufRead,BufNewFile /Users/jackblandin/tc/ansible-config/*.conf.j2 setfiletype nginx
 
+" test comment
