@@ -1,17 +1,18 @@
 set nocursorline " don't highlight current line
-set background=dark
 
-inoremap jj <ESC>
-imap jk <ESC>
-map <leader>r :NERDTreeFind<cr>
+" keyboard shortcuts
+inoremap jk <ESC>
+
+" highlight search
+"set hlsearch
+"nmap <leader>hl :let @/ = ""<CR>
 
 " gui settings
-
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
-    colorscheme default
+    colorscheme solarized
   else
-    colorscheme default
+    colorscheme desert
   endif
 endif
 
@@ -31,12 +32,8 @@ endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
-" Operations such as yy, D, and P work with the system clipboard. No need to prefix them with "+ or "*.
-set clipboard=unnamed
+colorscheme default
 
-" set nginx syntax for .dev files
-" autocmd BufRead,BufNewFile /etc/nginx/sites-*/* setfiletype conf
-autocmd BufRead,BufNewFile *.dev setfiletype nginx
-autocmd BufRead,BufNewFile /Users/jackblandin/tc/dockerfiles/*.conf setfiletype nginx
-autocmd BufRead,BufNewFile /Users/jackblandin/tc/ansible-config/*.conf.j2 setfiletype nginx
+" custom syntax highlighting
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 

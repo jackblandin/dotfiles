@@ -1,3 +1,0 @@
-bindkey jk vi-cmd-mode
-
-export DOCKER_HOST=tcp://192.168.23.2:2375
