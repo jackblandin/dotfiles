@@ -22,3 +22,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # Add rbenv init to your shell to enable shims and autocompletion
 eval "$(rbenv init -)"
 
+#ctags generate function
+gctags() {
+  ctags -R --languages=$1 --exclude=.git --exclude=log . $(bundle list --paths)
+}
