@@ -40,3 +40,8 @@ au BufRead,BufNewFile /Users/JackBlandin/tc/dockerfiles/*/*.dev,/etc/nginx/*,/us
 
 " reveal in nerd tree
 nmap ,n :NERDTreeFind<CR>
+
+
+" command aliases
+":command AliasName string of command to be aliased
+:command Fresh CtrlPClearCache
