@@ -19,7 +19,8 @@ alias st='script/test'
 alias ss='script/server'
 alias sc='script/console'
 alias stf='script/test --tag focus'
-alias notes='cd Google\ Drive/TC\ Desktop/notes'
+alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
+alias lang='cd ~/my/pra/lang'
 
 # Source oh-my-zsh zshrc template
 source ~/.oh-my-zsh/templates/zshrc.zsh-template
