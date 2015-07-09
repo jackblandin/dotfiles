@@ -38,3 +38,7 @@ eval "$(rbenv init -)"
 gctags() {
   ctags -R --languages=$1 --exclude=.git --exclude=log . $(bundle list --paths)
 }
+
+
+export EDITOR=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/vim
