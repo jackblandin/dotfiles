@@ -11,15 +11,14 @@ bindkey jk vi-cmd-mode
 ###
 ### ALIASES
 ###
-# installing vundle plugins alias
 alias vinstall='vim +PluginInstall +qall'
-# list tracked git files in a tree
 alias gls='git ls-tree -r master --name-only'
-# tc rspec script/test
+alias be='bundle exec'
+alias ber='bundle exec rake'
 alias st='script/test'
-# tc rspec script/test with focus flag
+alias ss='script/server'
+alias sc='script/console'
 alias stf='script/test --tag focus'
-# notes
 alias notes='cd Google\ Drive/TC\ Desktop/notes'
 
 # Source oh-my-zsh zshrc template
