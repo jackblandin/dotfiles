@@ -15,6 +15,7 @@ alias vinstall='vim +PluginInstall +qall'
 alias gls='git ls-tree -r master --name-only'
 alias be='bundle exec'
 alias ber='bundle exec rake'
+alias ngber='noglob bundle exec rake' # noglob fixes bug where args can't be passed in rake task
 alias st='script/test'
 alias ss='script/server'
 alias sc='script/console'
