@@ -23,6 +23,7 @@ alias stf='script/test --tag focus'
 alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
 alias lang='cd ~/my/pra/lang'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias b2d='$(/usr/local/bin/boot2docker shellinit)'
 
 # Source oh-my-zsh zshrc template
 source ~/.oh-my-zsh/templates/zshrc.zsh-template
