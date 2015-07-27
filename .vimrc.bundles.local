@@ -1,1 +1,2 @@
 Plugin 'evanmiller/nginx-vim-syntax'
+Plugin 'mtscout6/vim-cjsx'
