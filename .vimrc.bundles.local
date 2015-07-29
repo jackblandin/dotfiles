@@ -1,2 +1,4 @@
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'mtscout6/vim-cjsx'
+Plugin 'othree/yajs.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
