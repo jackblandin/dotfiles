@@ -67,6 +67,7 @@ set-option -g status-left ''
 set-option -g status-right '%l:%M%p'
 set-window-option -g window-status-current-fg magenta
 set-option -g status-fg default
+set -g status-justify centre
 
 # Status Bar solarized-dark (default)
 set-option -g status-bg white

@@ -12,7 +12,7 @@ if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
     colorscheme solarized
   else
-    colorscheme desert
+    colorscheme solarized
   endif
 endif
 
@@ -32,7 +32,10 @@ endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
-colorscheme default
+" colorscheme
+syntax enable
+set background=dark
+colorscheme solarized
 
 " custom syntax highlighting
 au BufRead,BufNewFile /Users/JackBlandin/tc/dockerfiles/*/*.dev,/etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif 
