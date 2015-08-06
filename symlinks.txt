@@ -1,0 +1,1 @@
+ln -s /Users/jackblandin/dotfiles/jdb_solarized_dark.vim /Users/JackBlandin/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/jdb_solarized_dark.vim
