@@ -45,6 +45,7 @@ let g:lightline = {
 " custom syntax highlighting
 au BufRead,BufNewFile /Users/JackBlandin/tc/dockerfiles/*/*.dev,/etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif 
 au BufRead,BufNewFile *es6 setfiletype javascript
+au BufRead,BufNewFile /Users/JackBlandin/tc/ansible-config/*/group_vars/* set filetype=yaml
 
 " reveal in nerd tree
 nmap ,n :NERDTreeFind<CR>
@@ -53,6 +54,5 @@ nmap ,n :NERDTreeFind<CR>
 " command aliases
 ":command AliasName string of command to be aliased
 :command Fresh CtrlPClearCache
-
 
 autocmd! bufwritepost .vimrc source ~/.vimrc

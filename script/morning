@@ -1,0 +1,6 @@
+#! /bin/bash -e
+cd /Users/jackblandin/tc/service_manager
+git pull
+vagrant up
+bundle exec rake start:update
+
