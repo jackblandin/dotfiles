@@ -4,7 +4,6 @@
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-source ~/.oh-my-zsh/oh-my-zsh.sh
 source ~/dotfiles/.zshrc.zsh-template.local
 
 
@@ -25,6 +24,7 @@ alias st='script/test --color --format documentation'
 alias ss='script/server'
 alias sc='script/console'
 alias stf='script/test --tag focus --color --format documentation'
+alias sb='script/bundle'
 alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
 alias lang='cd ~/my/pra/lang'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -33,6 +33,9 @@ alias pgstatus='pg_ctl -D /usr/local/var/postgres status'
 alias b2d='$(/usr/local/bin/boot2docker shellinit)'
 alias ggdr='cd ~/Google\ Drive'
 alias dotfiles='cd ~/dotfiles'
+alias ap="~/.rbenv/versions/2.1.2/bin/apiary"
+alias ap-reload="apiary preview --server --port=9090"
+alias ap-test="api-mock ./apiary.apib"
 
 ###
 ### ENVIRONMENT VARIABLES
