@@ -15,27 +15,29 @@ bindkey jk vi-cmd-mode
 ###
 ### ALIASES
 ###
-alias vinstall='vim +PluginInstall +qall'
-alias gls='git ls-tree -r master --name-only'
-alias be='bundle exec'
-alias ber='bundle exec rake'
-alias ngber='noglob bundle exec rake' # noglob fixes bug where args can't be passed in rake task
-alias st='script/test --color --format documentation'
-alias ss='script/server'
-alias sc='script/console'
-alias stf='script/test --tag focus --color --format documentation'
-alias sb='script/bundle'
-alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
-alias lang='cd ~/my/pra/lang'
-alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-alias pgstatus='pg_ctl -D /usr/local/var/postgres status'
-alias b2d='$(/usr/local/bin/boot2docker shellinit)'
-alias ggdr='cd ~/Google\ Drive'
-alias dotfiles='cd ~/dotfiles'
-alias ap="~/.rbenv/versions/2.1.2/bin/apiary"
 alias ap-reload="apiary preview --server --port=9090"
 alias ap-test="api-mock ./apiary.apib"
+alias ap="~/.rbenv/versions/2.1.2/bin/apiary"
+alias b2d='$(/usr/local/bin/boot2docker shellinit)'
+alias be='bundle exec'
+alias ber='bundle exec rake'
+alias bi='bundle install'
+alias cc='clear'
+alias dotfiles='cd ~/dotfiles'
+alias ggdr='cd ~/Google\ Drive'
+alias gls='git ls-tree -r master --name-only'
+alias lang='cd ~/my/pra/lang'
+alias ngber='noglob bundle exec rake' # noglob fixes bug where args can't be passed in rake task
+alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstatus='pg_ctl -D /usr/local/var/postgres status'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias sb='script/bundle'
+alias sc='script/console'
+alias ss='script/server'
+alias st='script/test --color --format documentation'
+alias stf='script/test --tag focus --color --format documentation'
+alias vinstall='vim +PluginInstall +qall'
 
 ###
 ### ENVIRONMENT VARIABLES
