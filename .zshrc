@@ -6,7 +6,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 source ~/dotfiles/.zshrc.zsh-template.local
 
-
 ###
 ### KEY-BINDINGS
 ###
@@ -37,6 +36,7 @@ alias sc='script/console'
 alias ss='script/server'
 alias st='script/test --color --format documentation'
 alias stf='script/test --tag focus --color --format documentation'
+alias ts='~/dotfiles/script/tmux_setup'
 alias vinstall='vim +PluginInstall +qall'
 
 ###
@@ -47,6 +47,11 @@ export PATH="$HOME/.rbenv/bin:$PATH" # Add ~/.rbenv/bin to your $PATH for access
 export EDITOR=/usr/local/bin/vim
 export VISUAL=/usr/local/bin/vim
 export NVM_DIR=~/.nvm
+
+###
+### OTHER
+###
+DISABLE_AUTO_TITLE="true" # disable auto title name for iTerm tabs
 
 source $(brew --prefix nvm)/nvm.sh
 

@@ -1,14 +1,11 @@
 #! /bin/bash -e
 
-morning () {
-  pgstart
-  cd /Users/jackblandin/tc/service_manager
-  git pull
-  vagrant up
-  bundle exec rake start:update
-  if [ "$1" = "off" ]; then
-    bundle exec rake stop
-  fi
-}
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+cd /Users/jackblandin/tc/service_manager
+git pull
+vagrant up
+bundle exec rake start:update
+if [ "$1" = "off" ]; then
+  bundle exec rake stop
+fi
 
-morning
