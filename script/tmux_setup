@@ -1,12 +1,19 @@
 #! /bin/bash -e
 
-name="$1"
-if [ -z "$1" ]; then
-  name="$(basename $PWD)"
+server_started="$1"
+name="$2"
+start_server=false
+tmux_window_names=("git" "run" "edit" "test"  "console" "ssh")
+tmux_window_names_length=${#tmux_window_names[@]}
+
+
+if [ "$1" = "on" ]; then
+  start_server=true
 fi
 
-tmux_window_names=("git" "run/test" "edit" "ssh")
-tmux_window_names_length=${#tmux_window_names[@]}
+if [ -z "$2" ]; then
+  name="$(basename $PWD)"
+fi
 
 echo -e "\033];$name\007" # set iTerm tab title
 
@@ -15,8 +22,18 @@ tmux rename-window ${tmux_window_names[0]}
 
 for (( i=1; i<tmux_window_names_length; i++ ))
 do
-  echo ${tmux_window_names[$i]}
   tmux new-window -n "${tmux_window_names[$i]}"
 done
+
+if $start_server; then
+  tmux select-window -t 2
+  tmux send-keys "script/server" Enter
+fi
+
+tmux select-window -t 6
+tmux send-keys "cat Capfile" Enter
+
+tmux select-window -t 3
+tmux send-keys "vim ." Enter
 
 tmux attach-session -t "$name"
