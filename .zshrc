@@ -39,7 +39,9 @@ alias ss='script/server'
 alias st='script/test --color --format documentation'
 alias stf='script/test --tag focus --color --format documentation'
 alias stjs='script/test --no-color'
+alias tat='tmux attach -t '
 alias ts='~/dotfiles/script/tmux_setup'
+alias vimdotz='vim ~/dotfiles/.zshrc'
 alias vinstall='vim +PluginInstall +qall'
 
 ###
