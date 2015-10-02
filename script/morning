@@ -1,17 +1,70 @@
 #! /bin/bash -e
 
+function spacer {
+  printf "\n====="
+  printf "\n=====\n\n"
+}
+
+
 should_git_pull=true
+should_run_all_containers=false
 should_stop_containers=false
+docker_containers=(
+  "backofficeapi"             "bouncer"                 "customsvc"
+  "diablo"                    "diabloreturnssvc"        "elasticsearch"
+  "employeessvc"              "feedssvc"                "financesvc"
+  "identityapi"               "inventoriumapi"          "membersapi"
+  "memberssvc"                "nginx"                   "nordstromapi"
+  "nordstromavailabilitysvc"  "nordstromproductssvc"    "nordstromwarehousesvc"
+  "operationsapi"             "postgres"                "productaddressessvc"
+  "productssvc"               "salesapi"                "salesordersvc"
+  "shoppingcartsvc"           "warehousemanagementsvc"
+)
+docker_containers_length=${#docker_containers[@]}
 
 if [ "$1" = "nopull" ] || [ "$2" = "nopull" ]; then should_git_pull=false; fi
+if [ "$1" = "all" ] || [ "$2" = "all" ]; then should_run_all_containers=true; fi
 if [ "$1" = "off" ] || [ "$2" = "off" ]; then should_stop_containers=true; fi
 
 echo "should_git_pull: $should_git_pull"
+echo "should_run_all_containers: $should_run_all_containers"
 echo "should_stop_containers: $should_stop_containers"
 
+spacer
+
+echo "starting postgres server..."
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+
+spacer
+
 cd /Users/jackblandin/tc/service_manager
-if [ should_git_pull ]; then git pull; fi
+if $should_git_pull; then 
+  echo "git pulling..."
+  git pull
+else
+  echo "skipping git pull"
+fi
+
+spacer
+
+echo "starting vagrant..."
 vagrant up
+
+spacer
+
+echo "starting and updating all containers"
 bundle exec rake start:update
-if [ should_stop_containers ]; then bundle exec rake stop; fi
+if [ $should_run_all_containers = false ] || [ $should_stop_containers = true ]; then
+  spacer
+  echo "stopping all containers"
+  spacer
+  bundle exec rake stop
+  if [ $should_run_all_containers = false ]; then
+    spacer
+    echo "starting only preset containers"
+    for (( i=1; i<docker_containers_length; i++))
+    do
+      bundle exec rake start "${docker_containers[$i]}"
+    done
+  fi
+fi
