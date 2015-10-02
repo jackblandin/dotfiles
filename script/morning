@@ -18,7 +18,7 @@ docker_containers=(
   "nordstromavailabilitysvc"  "nordstromproductssvc"    "nordstromwarehousesvc"
   "operationsapi"             "postgres"                "productaddressessvc"
   "productssvc"               "salesapi"                "salesordersvc"
-  "shoppingcartsvc"           "warehousemanagementsvc"
+  "shoppingcartsvc"           "taxgatewaysvc"           "warehousemanagementsvc"
 )
 docker_containers_length=${#docker_containers[@]}
 
