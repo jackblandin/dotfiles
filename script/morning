@@ -1,8 +1,9 @@
 #! /bin/bash -e
 
 function spacer {
-  printf "\n====="
-  printf "\n=====\n\n"
+  printf "\n=====================================================================\n\n"
+  printf "$1"
+  printf "\n=====================================================================\n\n"
 }
 
 
@@ -30,38 +31,29 @@ echo "should_git_pull: $should_git_pull"
 echo "should_run_all_containers: $should_run_all_containers"
 echo "should_stop_containers: $should_stop_containers"
 
-spacer
+spacer "starting postgres server..."
 
-echo "starting postgres server..."
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
-
-spacer
 
 cd /Users/jackblandin/tc/service_manager
 if $should_git_pull; then 
-  echo "git pulling..."
+  spacer "git pulling..."
   git pull
 else
-  echo "skipping git pull"
+  spacer "skipping git pull"
 fi
 
-spacer
+spacer "starting vagrant..."
 
-echo "starting vagrant..."
 vagrant up
 
-spacer
-
-echo "starting and updating all containers"
+spacer "starting and updating all containers"
 bundle exec rake start:update
 if [ $should_run_all_containers = false ] || [ $should_stop_containers = true ]; then
-  spacer
-  echo "stopping all containers"
-  spacer
+  spacer "stopping all containers"
   bundle exec rake stop
   if [ $should_run_all_containers = false ]; then
-    spacer
-    echo "starting only preset containers"
+    spacer "starting only preset containers"
     for (( i=1; i<docker_containers_length; i++))
     do
       bundle exec rake start "${docker_containers[$i]}"
