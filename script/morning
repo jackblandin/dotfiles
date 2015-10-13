@@ -1,9 +1,16 @@
 #! /bin/bash -e
 
 function spacer {
-  printf "\n=====================================================================\n\n"
+  line_break="\n"
+  single_spaced_line="\n====================================================================="
+  printf $line_break
+  printf $line_break
+  printf $single_spaced_line
+  printf $line_break
   printf "$1"
-  printf "\n=====================================================================\n\n"
+  printf $single_spaced_line
+  printf $line_break
+  printf $line_break
 }
 
 
@@ -22,14 +29,15 @@ docker_containers=(
   "shoppingcartsvc"           "taxgatewaysvc"           "warehousemanagementsvc"
 )
 docker_containers_length=${#docker_containers[@]}
+variables="should_git_pull: $should_git_pull\n
+should_run_all_containers: $should_run_all_containers\n
+should_stop_containers: $should_stop_containers"
 
 if [ "$1" = "nopull" ] || [ "$2" = "nopull" ]; then should_git_pull=false; fi
 if [ "$1" = "all" ] || [ "$2" = "all" ]; then should_run_all_containers=true; fi
 if [ "$1" = "off" ] || [ "$2" = "off" ]; then should_stop_containers=true; fi
 
-echo "should_git_pull: $should_git_pull"
-echo "should_run_all_containers: $should_run_all_containers"
-echo "should_stop_containers: $should_stop_containers"
+spacer $variables
 
 spacer "starting postgres server..."
 
