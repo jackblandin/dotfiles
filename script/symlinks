@@ -1,3 +1,4 @@
 #! /bin/bash -e
 
 ln -s /Users/jackblandin/dotfiles/.slate ~/.slate
+ln -s /Users/jackblandin/dotfiles/themes/agnoster.zsh-theme /Users/jackblandin/.oh-my-zsh/themes/my-agnoster.zsh-theme
