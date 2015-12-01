@@ -5,6 +5,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 source ~/dotfiles/.zshrc.zsh-template.local
+source ~/dotfiles/zsh/config
+# . ~/.zsh/config
 
 ###
 ### KEY-BINDINGS
@@ -42,6 +44,7 @@ alias ss='script/server'
 alias st='script/test --color --format documentation'
 alias stf='script/test --tag focus --color --format documentation'
 alias stjs='script/test --no-color'
+alias sw='script/worker'
 alias tmat='tmux attach -t'
 alias tmkill='tmux kill-session -t'
 alias ts='~/dotfiles/script/tmux_setup'
