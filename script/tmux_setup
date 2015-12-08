@@ -25,15 +25,15 @@ do
   tmux new-window -n "${tmux_window_names[$i]}"
 done
 
-if $start_server; then
-  tmux select-window -t 2
-  tmux send-keys "script/server" Enter
-fi
-
 tmux select-window -t 6
 tmux send-keys "cat Capfile" Enter
 
 tmux select-window -t 3
 tmux send-keys "vim ." Enter
+
+if $start_server; then
+  tmux select-window -t 2
+  tmux send-keys "script/server" Enter
+fi
 
 tmux attach-session -t "$name"

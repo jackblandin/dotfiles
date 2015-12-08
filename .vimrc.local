@@ -83,3 +83,9 @@ noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
 noremap <silent> <leader>pw :call DoWindowSwap()<CR>
 
 autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" Always reload buffer when external changes detected
+set autoread
+
+" Use the rbenv ruby instead of system (outdated) ruby
+let g:syntastic_ruby_mri_exec = '/usr/local/var/rbenv/shims/ruby'
