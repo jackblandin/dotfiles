@@ -32,6 +32,7 @@ alias dotz='. ~/.zshrc'
 alias ggdr='cd ~/Google\ Drive'
 alias gls='git ls-tree -r master --name-only'
 alias gpl='git_pretty_log' # special git log function in ~/dotfiles/zsh/functions/git_pretty_log
+alias kk='~/dotfiles/script/kill_current_tmux_session'
 alias lang='cd ~/my/pra/lang'
 alias ngber='noglob bundle exec rake' # noglob fixes bug where args can't be passed in rake task
 alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
