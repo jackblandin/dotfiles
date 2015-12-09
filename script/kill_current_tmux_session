@@ -1,4 +1,13 @@
 #! /bin/bash -e
 
+# kill running server
+tmux select-window -t 2
+tmux send-keys C-c
+
+# kill vim buffers
+tmux select-window -t 3
+# TODO
+
+# kill tmux session
 name="$(basename $PWD)"
 tmux kill-session -t $name
