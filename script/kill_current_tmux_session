@@ -4,6 +4,10 @@
 tmux select-window -t 2
 tmux send-keys C-c
 
+# kill running workers
+tmux select-window -t 7
+tmux send-keys C-c
+
 # kill vim buffers
 tmux select-window -t 3
 # TODO

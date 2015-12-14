@@ -1,17 +1,25 @@
 #! /bin/bash -e
 
-tmux_window_names=("git" "run" "edit" "test"  "console" "ssh")
+tmux_window_names=("git" "server" "edit" "test"  "console" "ssh" "workers")
 tmux_window_names_length=${#tmux_window_names[@]}
+git_pull=false
 start_server=false
+start_workers=false
 name="$(basename $PWD)"
 
-while getopts ":on:" opt; do
+while getopts ":swn:" opt; do
   case $opt in
-    o)
-      start_server=true
+    g)
+      git_pull=true
       ;;
     n)
       name="$OPTARG"
+      ;;
+    s)
+      start_server=true
+      ;;
+    w)
+      start_workers=true
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -23,8 +31,9 @@ while getopts ":on:" opt; do
   esac
 done
 
-echo "start_server = $start_server"
-echo "name = $name"
+echo "server (-s): $start_server"
+echo "workers (-w): $start_workers"
+echo "name: $name"
 
 echo -e "\033];$name\007" # set iTerm tab title
 
@@ -41,9 +50,19 @@ tmux send-keys "cat Capfile" Enter
 tmux select-window -t 3
 tmux send-keys "vim ." Enter
 
+if $git_pull; then
+  tmux-select-window -t 2
+  tmux send-keys "git checkout master && git pull && bundle install"
+fi
+
 if $start_server; then
   tmux select-window -t 2
   tmux send-keys "script/server" Enter
+fi
+
+if $start_workers; then
+  tmux select-window -t 7
+  tmux send-keys "script/worker" Enter
 fi
 
 tmux attach-session -t "$name"
