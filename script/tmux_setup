@@ -7,7 +7,7 @@ start_server=false
 start_workers=false
 name="$(basename $PWD)"
 
-while getopts ":swn:" opt; do
+while getopts ":gn:sw" opt; do
   case $opt in
     g)
       git_pull=true
@@ -51,8 +51,8 @@ tmux select-window -t 3
 tmux send-keys "vim ." Enter
 
 if $git_pull; then
-  tmux-select-window -t 2
-  tmux send-keys "git checkout master && git pull && bundle install"
+  tmux select-window -t 2
+  tmux send-keys "git checkout master && git pull && bundle install" Enter
 fi
 
 if $start_server; then

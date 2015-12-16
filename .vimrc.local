@@ -55,7 +55,11 @@ nmap ,n :NERDTreeFind<CR>
 " command aliases
 ""
 " :command AliasName string of command to be aliased
-:command Fresh CtrlPClearCache
+" :command Fresh CtrlPClearCache
+
+function! Fresh()
+  CtrlPClearCache
+endfunction
 
 ""
 " Custom Functions
@@ -79,6 +83,16 @@ function! DoWindowSwap()
     exe 'hide buf' markedBuf 
 endfunction
 
+
+"
+" ctags
+"
+" ,+ct - Open the definition in a new tab
+noremap <silent> <leader>ct  :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+" ,+cv - Open the definition in a vertical split
+noremap <silent> <leader>cv :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" allow swapping of two vim buffers
 noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
 noremap <silent> <leader>pw :call DoWindowSwap()<CR>
 

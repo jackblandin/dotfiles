@@ -50,6 +50,7 @@ alias sw='script/worker'
 alias tmat='tmux attach -t'
 alias tmkill='tmux kill-session -t'
 alias ts='~/dotfiles/script/tmux_setup'
+alias ts-help='~/dotfiles/script/tmux_setup_help'
 alias vimdotz='vim ~/dotfiles/.zshrc'
 alias vinstall='vim +PluginInstall +qall'
 
