@@ -55,11 +55,7 @@ nmap ,n :NERDTreeFind<CR>
 " command aliases
 ""
 " :command AliasName string of command to be aliased
-" :command Fresh CtrlPClearCache
-
-function! Fresh()
-  CtrlPClearCache
-endfunction
+:command Fresh CtrlPClearCache
 
 ""
 " Custom Functions
