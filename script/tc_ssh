@@ -1,0 +1,20 @@
+# vi: ft=zsh
+
+environment=$1
+box_number=$2
+user="jack"
+address=
+
+if [ "$environment" = "staging" ]; then
+  address=$(build_tc_stg_box_address $box_number)
+elif [ "$environment" = "production" ]; then
+  address=$(build_tc_prd_box_address $box_number)
+elif [ "$environment" = "" ]; then
+  echo "'environment' required"
+  exit 1
+else
+  echo "$environment is not a valid environment."
+  exit 1
+fi
+
+ssh "$user@$address"
