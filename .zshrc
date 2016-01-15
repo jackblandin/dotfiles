@@ -42,7 +42,7 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias sb='script/bundle'
 alias sc='script/console'
 alias sm='. ~/script/morning'
-alias ss='script/server'
+alias ss='script/server || script/dev'
 alias st='script/test --color --format documentation'
 alias stf='script/test --tag focus --color --format documentation'
 alias stjs='script/test --no-color'
@@ -63,6 +63,7 @@ export PATH="$HOME/.rbenv/bin:$PATH" # Add ~/.rbenv/bin to your $PATH for access
 export EDITOR=/usr/local/bin/vim
 export VISUAL=/usr/local/bin/vim
 export NVM_DIR=~/.nvm
+export LOG_FORMAT="colored"
 
 ###
 ### OTHER
