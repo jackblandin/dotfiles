@@ -55,24 +55,24 @@ layout twoScreen 'iTerm' ${bottomRight} 1
 
 # Bindings
 # bind g:ctrl;alt move ${centered}
-bind o:ctrl;alt ${full}
-bind h:ctrl;alt ${leftHalf}
-bind j:ctrl;alt ${bottomHalf}
-bind k:ctrl;alt ${topHalf}
-bind l:ctrl;alt ${rightHalf}
-bind u:ctrl;alt ${topLeft}
-bind i:ctrl;alt ${topRight}
-bind n:ctrl;alt ${bottomLeft}
-bind m:ctrl;alt ${bottomRight}
-bind =:ctrl;alt push up
-bind -:ctrl;alt push down
-bind [:ctrl;alt push left
-bind ]:ctrl;alt push right
-bind t:ctrl;alt focus 'iTerm'
-bind c:ctrl;alt focus 'Google Chrome'
-bind a:ctrl;alt focus 'Sublime Text'
-bind e:ctrl;alt focus 'Slack'
-bind s:ctrl;alt focus 'iOS Simulator'
+# bind o:ctrl;alt ${full}
+# bind h:ctrl;alt ${leftHalf}
+# bind j:ctrl;alt ${bottomHalf}
+# bind k:ctrl;alt ${topHalf}
+# bind l:ctrl;alt ${rightHalf}
+# bind u:ctrl;alt ${topLeft}
+# bind i:ctrl;alt ${topRight}
+# bind n:ctrl;alt ${bottomLeft}
+# bind m:ctrl;alt ${bottomRight}
+# bind =:ctrl;alt push up
+# bind -:ctrl;alt push down
+# bind [:ctrl;alt push left
+# bind ]:ctrl;alt push right
+# bind t:ctrl;alt focus 'iTerm'
+# bind c:ctrl;alt focus 'Google Chrome'
+# bind a:ctrl;alt focus 'Sublime Text'
+# bind e:ctrl;alt focus 'Slack'
+# bind s:ctrl;alt focus 'iOS Simulator'
 
 bind 0:ctrl;cmd ${middleTwoThird}
 bind 1:ctrl;cmd relaunch
