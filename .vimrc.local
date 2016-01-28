@@ -105,6 +105,11 @@ noremap <silent> <leader>cv :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
 noremap <silent> <leader>pw :call DoWindowSwap()<CR>
 
+"
+" source vim settings
+"
+so ~/dotfiles/vim/gitGutter.vim
+
 autocmd! bufwritepost ~/dotfiles/vimrc.local source ~/.vimrc
 
 "
