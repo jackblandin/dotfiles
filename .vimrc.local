@@ -7,7 +7,9 @@ inoremap jk <ESC>
 "set hlsearch
 "nmap <leader>hl :let @/ = ""<CR>
 
+"
 " gui settings
+"
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
     colorscheme solarized
@@ -32,13 +34,20 @@ endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
+"
 " colorscheme
+"
 syntax enable
 set background=dark
 colorscheme solarized
-
 let g:lightline = { 'colorscheme': 'jdb_solarized_dark', } " lightline status bar
 let g:gitgutter_enabled = 1 " turn on vin-git-gutter
+
+"
+" saved macros
+"
+let @0 = 'f=beldt=i jkj0' " unalign equals
+let @9 = '0f:dwi: jkj0' " unalign colons
 
 "
 " custom syntax highlighting
@@ -47,19 +56,21 @@ au BufRead,BufNewFile /Users/JackBlandin/tc/dockerfiles/*/*.dev,/etc/nginx/*,/us
 au BufRead,BufNewFile *es6 setfiletype javascript
 au BufRead,BufNewFile /Users/JackBlandin/tc/ansible-config/*/group_vars/* set filetype=yaml
 
+"
 " reveal in nerd tree
+"
 nmap ,n :NERDTreeFind<CR>
 
 
-""
+"
 " command aliases
-""
+"
 " :command AliasName string of command to be aliased
 :command! Fresh CtrlPClearCache
 
-""
+"
 " Custom Functions
-""
+"
 function! MarkWindowSwap()
     let g:markedWinNum = winnr()
 endfunction
@@ -88,14 +99,25 @@ noremap <silent> <leader>ct  :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " ,+cv - Open the definition in a vertical split
 noremap <silent> <leader>cv :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
+"
 " allow swapping of two vim buffers
+"
 noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
 noremap <silent> <leader>pw :call DoWindowSwap()<CR>
 
-autocmd! bufwritepost .vimrc source ~/.vimrc
+"
+" source vim settings
+"
+so ~/dotfiles/vim/gitGutter.vim
 
+autocmd! bufwritepost ~/dotfiles/vimrc.local source ~/.vimrc
+
+"
 " Always reload buffer when external changes detected
+"
 set autoread
 
-" Use the rbenv ruby instead of system (outdated) ruby
-let g:syntastic_ruby_mri_exec = '/usr/local/var/rbenv/shims/ruby'
+"
+" syntastic
+"
+let g:syntastic_ruby_mri_exec = '/usr/local/var/rbenv/shims/ruby' " Use the rbenv ruby instead of system (outdated) ruby
