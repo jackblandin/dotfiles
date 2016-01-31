@@ -1,4 +1,9 @@
 #! /bin/bash -e
 
-ln -s /Users/jackblandin/dotfiles/.slate ~/.slate
-ln -s /Users/jackblandin/dotfiles/themes/agnoster.zsh-theme /Users/jackblandin/.oh-my-zsh/themes/my-agnoster.zsh-theme
+if [ ! -e "/Users/jackblandin/dotfiles/.slate" ]; then
+  ln -s /Users/jackblandin/dotfiles/.slate ~/.slate
+fi
+
+if [ ! -e "/Users/jackblandin/dotfiles/themes/agnoster.zsh-theme" ]; then
+  ln -s /Users/jackblandin/dotfiles/themes/agnoster.zsh-theme /Users/jackblandin/.oh-my-zsh/themes/my-agnoster.zsh-theme
+fi
