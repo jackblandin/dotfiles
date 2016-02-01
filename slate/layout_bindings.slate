@@ -1,0 +1,2 @@
+bind [:ctrl;cmd ${leftTwoThird}
+bind ]:ctrl;cmd ${rightTwoThird}

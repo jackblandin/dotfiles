@@ -1,0 +1,2 @@
+bind ;:ctrl       focus 'Google Chrome'
+bind ;:ctrl;shift hide  'Google Chrome'

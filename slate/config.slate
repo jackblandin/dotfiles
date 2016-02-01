@@ -1,0 +1,9 @@
+config nudgePercentOf                 screenSize
+config resizePercentOf                screenSize
+config windowHintsTopLeftX            (windowSizeX/2)-(windowHintsWidth/2)
+config windowHintsTopLeftY            (windowSizeY/2)-(windowHintsHeight/2)
+config windowHintsIgnoreHiddenWindows false
+config orderScreensLeftToRight        true
+config keyboardLayout                 "qwerty"
+config layoutFocusOnActivate          true
+config windowHintsShowIcons           true
