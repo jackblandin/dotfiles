@@ -13,6 +13,7 @@ alias dotfiles='cd ~/dotfiles'
 alias dotz='. ~/.zshrc'
 alias ggdr='cd ~/Google\ Drive'
 alias gls='git ls-tree -r master --name-only'
+alias gpfl='. ~/dotfiles/zsh/scripts/git/git_push_force_with_lease.zsh'
 alias gpl='git_pretty_log' # special git log function in ~/dotfiles/zsh/functions/git_pretty_log
 alias grih='. ~/dotfiles/zsh/scripts/git/git_rebase_interactive_head.zsh'
 alias kk='~/dotfiles/zsh/scripts/kill_current_tmux_session'
