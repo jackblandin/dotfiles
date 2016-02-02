@@ -3,7 +3,7 @@
 function print_block {
   line_break="\n"
   border="\n====================================================================="
-  printf $line_break$line_break$border$line_break
+  printf $line_break$border$line_break
   printf "$1"
   printf $border$line_break$line_break
 }
@@ -49,6 +49,7 @@ fi
 
 print_block "starting vagrant..."
 
+vagrant halt
 vagrant up
 
 print_block "starting and updating all containers"
