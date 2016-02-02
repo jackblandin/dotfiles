@@ -2,7 +2,7 @@ source ~/dotfiles/slate/application_shortcuts.slate
 source ~/dotfiles/slate/config.slate
 source ~/dotfiles/slate/aliases.slate
 source ~/dotfiles/slate/layout_bindings.slate
-source ~/resize_bindings.slate
+source ~/dotfiles/slate/resize_bindings.slate
 
 # relaunch slate shortcut
 bind z:ctrl;cmd relaunch
