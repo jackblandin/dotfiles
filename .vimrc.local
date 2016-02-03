@@ -3,10 +3,6 @@ set nocursorline " don't highlight current line
 " keyboard shortcuts
 inoremap jk <ESC>
 
-" highlight search
-"set hlsearch
-"nmap <leader>hl :let @/ = ""<CR>
-
 "
 " gui settings
 "
@@ -83,26 +79,13 @@ function! DoWindowSwap()
     exe 'hide buf' markedBuf 
 endfunction
 
-
-"
-" ctags
-"
-" ,+ct - Open the definition in a new tab
-noremap <silent> <leader>ct  :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-" ,+cv - Open the definition in a vertical split
-noremap <silent> <leader>cv :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-"
-" allow swapping of two vim buffers
-"
-noremap <silent> <leader>mw :call MarkWindowSwap()<CR>
-noremap <silent> <leader>pw :call DoWindowSwap()<CR>
-
 "
 " source vim settings
 "
-so ~/dotfiles/vim/gitGutter.vim
-so ~/dotfiles/vim/setFileTypes.vim
+so ~/dotfiles/vim/set_file_types.vim
+so ~/dotfiles/vim/maps/ctag_maps.vim
+so ~/dotfiles/vim/maps/git_gutter_maps.vim
+so ~/dotfiles/vim/maps/buffer_swap_maps.vim
 
 autocmd! bufwritepost ~/dotfiles/vimrc.local source ~/.vimrc
 
@@ -114,4 +97,6 @@ set autoread
 "
 " syntastic
 "
-let g:syntastic_ruby_mri_exec = '/usr/local/var/rbenv/shims/ruby' " Use the rbenv ruby instead of system (outdated) ruby
+" Run this command to fix rubo-cop not using correct ruby version.
+" It will fix your shims (check by running !echo $PATH)
+" sudo mv /etc/zshenv /etc/zprofile
