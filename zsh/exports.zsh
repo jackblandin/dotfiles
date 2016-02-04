@@ -4,3 +4,5 @@ export EDITOR=/usr/local/bin/vim
 export VISUAL=/usr/local/bin/vim
 export NVM_DIR=~/.nvm
 export LOG_FORMAT="colored"
+export ZSH=$HOME/.oh-my-zsh
+export PATH=$HOME/bin:/usr/local/bin:$PATH
