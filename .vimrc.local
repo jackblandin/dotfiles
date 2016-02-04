@@ -40,12 +40,6 @@ let g:lightline = { 'colorscheme': 'jdb_solarized_dark', } " lightline status ba
 let g:gitgutter_enabled = 1 " turn on vin-git-gutter
 
 "
-" saved macros
-"
-let @0 = 'f=beldt=i jkj0' " unalign equals
-let @9 = '0f:dwi: jkj0' " unalign colons
-
-"
 " reveal in nerd tree
 "
 nmap ,n :NERDTreeFind<CR>
@@ -86,6 +80,7 @@ so ~/dotfiles/vim/set_file_types.vim
 so ~/dotfiles/vim/maps/ctag_maps.vim
 so ~/dotfiles/vim/maps/git_gutter_maps.vim
 so ~/dotfiles/vim/maps/buffer_swap_maps.vim
+so ~/dotfiles/vim/macros.vim
 
 autocmd! bufwritepost ~/dotfiles/vimrc.local source ~/.vimrc
 
