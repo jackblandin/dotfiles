@@ -33,3 +33,9 @@ function! DoWindowSwap()
   "Hide and open so that we aren't prompted and keep history
   exe 'hide buf' markedBuf 
 endfunction
+
+function! RemoveCommaSpace()
+  exe '%s/\(\s\+\),\s/,\1/g'
+endfunction
+
+command! RC call RemoveCommaSpace()
