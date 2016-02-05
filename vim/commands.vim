@@ -1,0 +1,1 @@
+:command! Fresh CtrlPClearCache
