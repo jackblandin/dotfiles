@@ -1,6 +1,6 @@
 #! /bin/bash -e
 
-tmux_window_names=("git" "server" "edit" "test"  "console" "ssh" "workers")
+tmux_window_names=("git" "server" "edit" "test"  "console" "ssh_stg" "workers" "ssh_prd")
 tmux_window_names_length=${#tmux_window_names[@]}
 git_pull=false
 start_server=false
@@ -45,6 +45,9 @@ for (( i=1; i<tmux_window_names_length; i++ )); do
 done
 
 tmux select-window -t 6
+tmux send-keys "cat Capfile" Enter
+
+tmux select-window -t 8
 tmux send-keys "cat Capfile" Enter
 
 tmux select-window -t 3
