@@ -1,0 +1,6 @@
+# vi: ft=zsh
+
+environment=$1
+service=$2
+db_url=$(get_db_url $environment $service)
+psql $db_url

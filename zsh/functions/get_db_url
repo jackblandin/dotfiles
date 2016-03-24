@@ -1,0 +1,21 @@
+# vi: ft=zsh
+
+
+function get_db_url() {
+
+  declare -A prod_db_urls
+  prod_db_urls[finance_svc]="postgres://finance:Zca123sdF1dksfsl12347oWyGLjNJehbsriPLAyN8roRToQJjkDX@postgres-4.prd.aws1.trunkclub.systems:5432/postgres"
+  prod_db_urls[trunkclub]="abc123"
+
+  declare -A stag_db_urls
+
+  local environment=$1
+  local service=$2
+  local environemnt_urls
+
+  if [ $1 = "staging" ]; then
+    echo $stag_urls[$service]
+  elif [ $1 = "production" ]; then
+    echo $prod_db_urls[$service]
+  fi
+}
