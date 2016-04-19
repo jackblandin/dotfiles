@@ -8,6 +8,12 @@ function print_block {
   printf $border$line_break$line_break
 }
 
+function join {
+  local IFS="$1"
+  shift
+  echo "$*"
+}
+
 
 # should_git_pull=true
 should_git_pull=false
@@ -15,27 +21,22 @@ should_run_all_containers=false
 should_stop_containers=false
 docker_containers=(
   "backofficeapi"
-  "bouncer"
   "customsvc"
   "diablo"
   "diabloreturnssvc"
-  "elasticsearch"
   "employeessvc"
   "feedssvc"
   "financesvc"
-  "identityapi"
   "inventoriumapi"
   "leadallocationapi"
   "locationssvc"
   "membersapi"
   "memberssvc"
-  "nginx"
   "nordstromapi"
   "nordstromavailabilitysvc"
   "nordstromproductssvc"
   "nordstromwarehousesvc"
   "operationsapi"
-  "postgres"
   "productaddressessvc"
   "productssvc"
   "salesapi"
@@ -69,21 +70,5 @@ else
   print_block "skipping git pull"
 fi
 
-print_block "starting vagrant..."
-
-vagrant halt
-vagrant up
-
-print_block "starting and updating all containers"
-bundle exec rake start:update
-if [ $should_run_all_containers = false ] || [ $should_stop_containers = true ]; then
-  print_block "stopping all containers"
-  bundle exec rake stop
-  if [ $should_run_all_containers = false ]; then
-    print_block "starting only preset containers"
-    for (( i=1; i<docker_containers_length; i++))
-    do
-      bundle exec rake start "${docker_containers[$i]}"
-    done
-  fi
-fi
+print_block "starting only preset containers"
+sh ~/tc/service_manager/script/start $(join " " $docker_containers)
