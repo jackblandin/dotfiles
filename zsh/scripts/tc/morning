@@ -23,6 +23,7 @@ docker_containers=(
   "backofficeapi"
   "customsvc"
   "diablo"
+  "diablopks"
   "diabloreturnssvc"
   "employeessvc"
   "feedssvc"
@@ -44,6 +45,7 @@ docker_containers=(
   "shippingsvc"
   "shoppingcartsvc"
   "taxgatewaysvc"
+  "trunkclubpks"
   "warehousemanagementsvc"
 )
 docker_containers_length=${#docker_containers[@]}
