@@ -10,4 +10,4 @@ source $ZSH/oh-my-zsh.sh
 
 plugins=(git)
 
-eval "$(rbenv init -)" # Add rbenv init to your shell to enable shims and autocompletion
+source ~/dotfiles/zsh/evals.zsh

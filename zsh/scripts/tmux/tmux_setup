@@ -1,10 +1,11 @@
 #! /bin/bash -e
 
-tmux_window_names=("git" "server" "edit" "test"  "console" "ssh_stg" "workers" "ssh_prd")
+tmux_window_names=("manager" "server" "edit" "test"  "dev" "stg" "workers" "prod" "kafka_worker")
 tmux_window_names_length=${#tmux_window_names[@]}
 git_pull=false
 start_server=false
 start_workers=false
+start_kafka_worker=false
 name="$(basename $PWD)"
 
 while getopts ":gn:sw" opt; do
@@ -20,6 +21,9 @@ while getopts ":gn:sw" opt; do
       ;;
     w)
       start_workers=true
+      ;;
+    k)
+      start_kafka_worker=true
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -55,17 +59,22 @@ tmux send-keys "vim ." Enter
 
 if $git_pull; then
   tmux select-window -t 2
-  tmux send-keys "git checkout master && git pull && bundle install" Enter
+  tmux send-keys "git checkout master && git pull origin master" Enter
 fi
 
-if $start_server; then
-  tmux select-window -t 2
-  tmux send-keys "script/server" Enter
+if $start_kafka_worker; then
+  tmux select-window -t 9
+  tmux send-keys "script/kafka_worker" Enter
 fi
 
 if $start_workers; then
   tmux select-window -t 7
   tmux send-keys "script/worker" Enter
+fi
+
+if $start_server; then
+  tmux select-window -t 2
+  tmux send-keys "script/server" Enter
 fi
 
 tmux attach-session -t "$name"
