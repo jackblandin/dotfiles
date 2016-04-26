@@ -74,7 +74,7 @@ fi
 
 if $start_server; then
   tmux select-window -t 2
-  tmux send-keys "script/server" Enter
+  tmux send-keys "ss" Enter
 fi
 
 tmux attach-session -t "$name"

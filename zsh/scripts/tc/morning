@@ -39,7 +39,6 @@ docker_containers=(
   "nordstromwarehousesvc"
   "operationsapi"
   "productaddressessvc"
-  "productssvc"
   "salesapi"
   "salesordersvc"
   "shippingsvc"
