@@ -1,36 +1,4 @@
-set nocursorline " don't highlight current line
-
-" keyboard shortcuts
-inoremap jk <ESC>
-
-"
-" gui settings
-"
-if (&t_Co == 256 || has('gui_running'))
-  if ($TERM_PROGRAM == 'iTerm.app')
-    colorscheme solarized
-  else
-    colorscheme solarized
-  endif
-endif
-
-"
-" colorscheme
-"
-syntax enable
-set background=dark
-colorscheme solarized
-let g:lightline = { 'colorscheme': 'jdb_solarized_dark', } " lightline status bar
-let g:gitgutter_enabled = 1 " turn on vin-git-gutter
-
-"
-" reveal in nerd tree
-"
-nmap ,n :NERDTreeFind<CR>
-
-"
-" source vim settings
-"
+so ~/dotfiles/vim/color_scheme.vim
 so ~/dotfiles/vim/set_file_types.vim
 so ~/dotfiles/vim/functions.vim
 so ~/dotfiles/vim/commands.vim
@@ -38,8 +6,8 @@ so ~/dotfiles/vim/maps/auto_close.vim
 so ~/dotfiles/vim/maps/ctag_maps.vim
 so ~/dotfiles/vim/maps/git_gutter_maps.vim
 so ~/dotfiles/vim/maps/buffer_swap_maps.vim
+so ~/dotfiles/vim/maps/other.vim
 so ~/dotfiles/vim/macros.vim
-
-autocmd! bufwritepost ~/dotfiles/vimrc.local source ~/.vimrc
-
-set autoread " Always reload buffer when external changes detected
+so ~/dotfiles/vim/syntax/go.vim
+so ~/dotfiles/vim/sets.vim
+so ~/dotfiles/vim/other.vim
