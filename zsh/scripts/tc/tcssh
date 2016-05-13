@@ -17,4 +17,5 @@ else
   exit 1
 fi
 
+echo "user@address: $user@$address"
 ssh "$user@$address"
