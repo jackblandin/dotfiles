@@ -1,0 +1,22 @@
+# vi: ft=zsh
+
+function get_box_address() {
+  svc=$1
+  env=$2
+
+  user="jack"
+  addr=
+
+  declare -A prd_addresses
+  prd_addresses[finance_svc]="bck01.prd.aws1.trunkclub.systems"
+
+  declare -A stg_addresses
+  stg_addresses[finance_svc]="bck01.stg.aws1.trunkclub.systems"
+
+
+  if [ $env = "production" ]; then
+    echo $prd_addresses[$svc]
+  elif [ $env = "staging" ]; then
+    echo $stg_addresses[$svc]
+  fi
+}
