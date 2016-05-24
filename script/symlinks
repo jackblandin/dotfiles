@@ -1,2 +1,4 @@
+#! /bin/bash
+
 ln -s /Users/jackblandin/dotfiles/jdb_solarized_dark.vim /Users/JackBlandin/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/jdb_solarized_dark.vim
-ln -s /Users/jackblandin/dotfiles/script/morning /Users/jackblandin/script/morning
+ln -s ~/dotfiles/zsh/zshenv ~/.zshenv

@@ -1,7 +1,7 @@
 # vi: ft=zsh
 
-environment=$1
-service=$2
-db_url=$(get_db_url $environment $service)
+svc=$1
+env=$2
+db_url=$(get_db_url $svc $env)
 echo "db_url: $db_url"
 pgcli $db_url

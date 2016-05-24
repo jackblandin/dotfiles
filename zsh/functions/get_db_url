@@ -2,6 +2,8 @@
 
 
 function get_db_url() {
+  local svc=$1
+  local env=$2
 
   declare -A dev_db_urls
   dev_db_urls[finance_svc]="postgres://finance_svc:finance_svc@192.168.23.2:5432/postgres2"
@@ -20,15 +22,11 @@ function get_db_url() {
   prod_db_urls[sales_order_svc]="postgres://sales_order_svc:5lN5IM_bKhNQh_T0ydX.@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
   prod_db_urls[trunkclub]="postgres://diablo:MrxnqjtQML8UU4tGJ7RtGxrBp57w5zAuPb9xVuKm@diablo-1.prd.aws1.trunkclub.systems:5432/diablo"
 
-  local environment=$1
-  local service=$2
-  local environemnt_urls
-
-  if [ $1 = "dev" ]; then
-    echo $dev_urls[$service]
-  elif [ $1 = "staging" ]; then
-    echo $stag_urls[$service]
-  elif [ $1 = "production" ]; then
-    echo $prod_db_urls[$service]
+  if [ $env = "dev" ]; then
+    echo $dev_db_urls[$svc]
+  elif [ $env = "stg" ]; then
+    echo $stag_db_urls[$svc]
+  elif [ $env = "prd" ]; then
+    echo $prod_db_urls[$svc]
   fi
 }

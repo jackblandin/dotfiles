@@ -9,14 +9,16 @@ function get_box_address() {
 
   declare -A prd_addresses
   prd_addresses[finance_svc]="bck01.prd.aws1.trunkclub.systems"
+  prd_addresses[members_svc]="mbr01.prd.aws1.trunkclub.systems"
 
   declare -A stg_addresses
   stg_addresses[finance_svc]="bck01.stg.aws1.trunkclub.systems"
+  stg_addresses[members_svc]="mbr01.stg.aws1.trunkclub.systems"
 
 
-  if [ $env = "production" ]; then
+  if [ $env = "prd" ]; then
     echo $prd_addresses[$svc]
-  elif [ $env = "staging" ]; then
+  elif [ $env = "stg" ]; then
     echo $stg_addresses[$svc]
   fi
 }
