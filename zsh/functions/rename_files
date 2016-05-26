@@ -1,7 +1,12 @@
 # vi: ft=zsh
 
 function rename_files() {
-  local old_name=$1
-  local new_name=$2
-  for i in ./**/*$old_name*;do mv -- "$i" "${i//$old_name/$new_name}";done
+  local old_pattern=$1
+  local new_pattern=$2
+  for i in ./**/*$old_pattern*; do
+    local old_file_name=$i
+    local new_file_name=${i//$old_pattern/$new_pattern}
+    echo "renaming $old_file_name to $new_file_name"
+    mv -- "$i" "${i//$old_pattern/$new_pattern}"
+  done
 }
