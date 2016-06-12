@@ -1,8 +1,9 @@
+so ~/dotfiles/vim/plugins.vim
 so ~/dotfiles/vim/color_scheme.vim
 so ~/dotfiles/vim/set_file_types.vim
 so ~/dotfiles/vim/functions.vim
 so ~/dotfiles/vim/commands.vim
-so ~/dotfiles/vim/maps/auto_close.vim
+" so ~/dotfiles/vim/maps/auto_close.vim
 so ~/dotfiles/vim/maps/ctag_maps.vim
 so ~/dotfiles/vim/maps/git_gutter_maps.vim
 so ~/dotfiles/vim/maps/buffer_swap_maps.vim
