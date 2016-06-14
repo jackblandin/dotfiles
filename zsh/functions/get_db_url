@@ -6,29 +6,33 @@ function get_db_url() {
   local env=$2
 
   declare -A dev_db_urls
-  dev_db_urls[finance_svc]="postgres://finance_svc:finance_svc@192.168.23.2:5432/postgres2"
-  dev_db_urls[members_svc]="postgresql://members_svc:members_svc@postgres.trunkclub.dev:5432/postgres"
-  dev_db_urls[trunkclub]="postgres://diablo:diablo@postgres.trunkclub.dev:5432/diablo"
+  dev_db_urls[fs]="postgres://finance_svc:finance_svc@192.168.23.2:5432/postgres2"
+  dev_db_urls[ms]="postgresql://members_svc:members_svc@postgres.trunkclub.dev:5432/postgres"
+  dev_db_urls[t]="postgres://diablo:diablo@postgres.trunkclub.dev:5432/diablo"
 
-  declare -A stag_db_urls
-  stag_db_urls[finance_svc]="postgres://finance_svc:usUgUzrNcI:VSAxyzpC_@postgres-2.stg.aws1.trunkclub.systems:5432/postgres"
-  stag_db_urls[members_svc]="postgres://members_svc:KzKpSBzw2BG08H8Yj5gL@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
-  stag_db_urls[sales_order_svc]="postgres://sales_order_svc:5lN5IM_bKhNQh_T0ydX.@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
-  stag_db_urls[trunkclub]="postgres://diablo:9iPFla159sk123diGQfvtE7mXWnov9@diablo-1.stg.aws1.trunkclub.systems:5432/diablo"
-  stag_db_urls[warehouse_management_svc]="postgres://warehouse_management_svc:sMXTwArYU0,Gt1p.6yE-@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
+  declare -A stg_db_urls
+  stg_db_urls[fs]="postgres://finance_svc:usUgUzrNcI:VSAxyzpC_@postgres-2.stg.aws1.trunkclub.systems:5432/postgres"
+  stg_db_urls[ia]="postgres://inventorium_api:Jd:P.OKwIRi:gTRypXMt@postgres-2.stg.aws1.trunkclub.systems:5432/postgres"
+  stg_db_urls[ms]="postgres://members_svc:KzKpSBzw2BG08H8Yj5gL@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
+  stg_db_urls[nws]="postgres://nordstrom_warehouse_svc:PPX_fa8P9McU:8nnQKMg@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
+  stg_db_urls[sos]="postgres://sales_order_svc:5lN5IM_bKhNQh_T0ydX.@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
+  stg_db_urls[t]="postgres://diablo:9iPFla159sk123diGQfvtE7mXWnov9@diablo-1.stg.aws1.trunkclub.systems:5432/diablo"
+  stg_db_urls[wms]="postgres://warehouse_management_svc:sMXTwArYU0,Gt1p.6yE-@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
 
-  declare -A prod_db_urls
-  prod_db_urls[finance_svc]="postgres://finance:Zca123sdF1dksfsl12347oWyGLjNJehbsriPLAyN8roRToQJjkDX@postgres-4.prd.aws1.trunkclub.systems:5432/postgres"
-  prod_db_urls[members_svc]="postgres://members_svc:KzKpSBzw2BG08H8Yj5gL@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
-  prod_db_urls[sales_order_svc]="postgres://sales_order_svc:5lN5IM_bKhNQh_T0ydX.@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
-  prod_db_urls[trunkclub]="postgres://diablo:MrxnqjtQML8UU4tGJ7RtGxrBp57w5zAuPb9xVuKm@diablo-1.prd.aws1.trunkclub.systems:5432/diablo"
-  prod_db_urls[warehouse_management_svc]="postgres://warehouse_management_svc:N:-s2yh-x8lE-jWJJW3K@postgres-2.prd.aws1.trunkclub.systems:5432/postgres"
+  declare -A prd_db_urls
+  prd_db_urls[fs]="postgres://finance:Zca123sdF1dksfsl12347oWyGLjNJehbsriPLAyN8roRToQJjkDX@postgres-4.prd.aws1.trunkclub.systems:5432/postgres"
+  prd_db_urls[ia]="DATABASE_URL=postgres://inventorium_api:nvMmRQ-7-bUMnkVV.Su:@postgres-4.prd.aws1.trunkclub.systems:5432/postgres"
+  prd_db_urls[ms]="postgres://members_svc:KzKpSBzw2BG08H8Yj5gL@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
+  prd_db_urls[nws]="postgres://nordstrom_warehouse_svc:YlYY_NCJe3RWLH3J89AV@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
+  prd_db_urls[sos]="postgres://sales_order_svc:5lN5IM_bKhNQh_T0ydX.@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
+  prd_db_urls[t]="postgres://diablo:MrxnqjtQML8UU4tGJ7RtGxrBp57w5zAuPb9xVuKm@diablo-1.prd.aws1.trunkclub.systems:5432/diablo"
+  prd_db_urls[wms]="postgres://warehouse_management_svc:N:-s2yh-x8lE-jWJJW3K@postgres-2.prd.aws1.trunkclub.systems:5432/postgres"
 
   if [ $env = "dev" ]; then
     echo $dev_db_urls[$svc]
   elif [ $env = "stg" ]; then
-    echo $stag_db_urls[$svc]
+    echo $stg_db_urls[$svc]
   elif [ $env = "prd" ]; then
-    echo $prod_db_urls[$svc]
+    echo $prd_db_urls[$svc]
   fi
 }
