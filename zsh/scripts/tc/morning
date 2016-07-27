@@ -15,8 +15,7 @@ function join {
 }
 
 
-# should_git_pull=true
-should_git_pull=false
+should_git_pull=true
 should_run_all_containers=false
 should_stop_containers=false
 docker_containers=(
