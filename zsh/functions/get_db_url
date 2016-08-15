@@ -14,9 +14,11 @@ function get_db_url() {
   declare -A stg_db_urls
   stg_db_urls[fs]="postgres://finance_svc:usUgUzrNcI:VSAxyzpC_@postgres-2.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[ia]="postgres://inventorium_api:Jd:P.OKwIRi:gTRypXMt@postgres-2.stg.aws1.trunkclub.systems:5432/postgres"
+  stg_db_urls[ls]="postgres://locations_svc:Z321951243ksfsl12347oWyGLjNJehbsriPLAyN8roRToQasdcjkDX@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[ms]="postgres://members_svc:KzKpSBzw2BG08H8Yj5gL@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[nas]="postgres://nordstorm_availability_svc:l8,Up_ZQahwKtE2LLcWy@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[nws]="postgres://nordstrom_warehouse_svc:PPX_fa8P9McU:8nnQKMg@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
+  stg_db_urls[ship]="postgres://shipping_svc_staging_r:XCsCY0W_6Nf_Zh0CXxuj@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[sos]="postgres://sales_order_svc:5lN5IM_bKhNQh_T0ydX.@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[t]="postgres://diablo:9iPFla159sk123diGQfvtE7mXWnov9@diablo-1.stg.aws1.trunkclub.systems:5432/diablo"
   stg_db_urls[wms]="postgres://warehouse_management_svc:sMXTwArYU0,Gt1p.6yE-@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
@@ -24,9 +26,11 @@ function get_db_url() {
   declare -A prd_db_urls
   prd_db_urls[fs]="postgres://finance:Zca123sdF1dksfsl12347oWyGLjNJehbsriPLAyN8roRToQJjkDX@postgres-4.prd.aws1.trunkclub.systems:5432/postgres"
   prd_db_urls[ia]="postgres://inventorium_api:nvMmRQ-7-bUMnkVV.Su:@postgres-4.prd.aws1.trunkclub.systems:5432/postgres"
+  prd_db_urls[ls]="postgres://locations_svc:ZWOAsdzsdF1dksfsl123470xzcWyfPOQW39i41LZXcklaOR1@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
   prd_db_urls[ms]="postgres://members_svc:KzKpSBzw2BG08H8Yj5gL@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
   prd_db_urls[nas]="postgres://nordstorm_availability_svc:l8,Up_ZQahwKtE2LLcWy@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
   prd_db_urls[nws]="postgres://nordstrom_warehouse_svc:YlYY_NCJe3RWLH3J89AV@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
+  prd_db_urls[ship]="postgres://shipping_svc_production:2U2I56nn6Mq_UwpbCTP_@postgres-2.prd.aws1.trunkclub.systems:5432/postgres"
   prd_db_urls[sos]="postgres://sales_order_svc:5lN5IM_bKhNQh_T0ydX.@postgres-1.prd.aws1.trunkclub.systems:5432/postgres"
   prd_db_urls[t]="postgres://diablo:MrxnqjtQML8UU4tGJ7RtGxrBp57w5zAuPb9xVuKm@diablo-1.prd.aws1.trunkclub.systems:5432/diablo"
   prd_db_urls[wms]="postgres://warehouse_management_svc:N:-s2yh-x8lE-jWJJW3K@postgres-2.prd.aws1.trunkclub.systems:5432/postgres"
