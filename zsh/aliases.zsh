@@ -18,6 +18,7 @@ alias fantasy_svc='cd ~/my/fantasy/fantasy_svc && ts -s'
 alias field_day_back='cd ~/my/field_day/fieldday-backend && ts -s'
 alias field_day_front='cd ~/my/field_day/fieldday-frontend && ts -s'
 alias ggdr='cd ~/Google\ Drive'
+alias glenv='source activate gl-env' #activates conda environment for graphlab
 alias gls='git ls-tree -r master --name-only'
 alias gpfl='. ~/dotfiles/zsh/scripts/git/git_push_force_with_lease.zsh'
 alias gpl='git_pretty_log' # special git log function in ~/dotfiles/zsh/functions/git_pretty_log
