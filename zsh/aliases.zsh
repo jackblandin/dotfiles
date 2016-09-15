@@ -24,6 +24,7 @@ alias gpfl='. ~/dotfiles/zsh/scripts/git/git_push_force_with_lease.zsh'
 alias gpl='git_pretty_log' # special git log function in ~/dotfiles/zsh/functions/git_pretty_log
 alias grih='. ~/dotfiles/zsh/scripts/git/git_rebase_interactive_head.zsh'
 alias kk='~/dotfiles/zsh/scripts/tmux/kill_current_tmux_session'
+alias learn="cd ~/my/learning_web_apps"
 alias mlstan='cd ~/Desktop/ML-Standford'
 alias mlwash='cd ~/Desktop/ML-Washington'
 alias morning='. ~/dotfiles/zsh/scripts/tc/morning'
