@@ -18,3 +18,4 @@ so ~/dotfiles/vim/macros.vim
 so ~/dotfiles/vim/syntax/go.vim
 so ~/dotfiles/vim/sets.vim
 so ~/dotfiles/vim/other.vim
+so ~/dotfiles/vim/80_char_line.vim
