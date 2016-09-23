@@ -15,3 +15,6 @@ export PATH=$PATH:$GOROOT/bin
 
 # Miniconda2 for Python
 export PATH="/Users/JackBlandin/miniconda2/bin:$PATH"
+
+# Data Science database config
+export DB_CONFIG=~/Desktop/data_science_demystified/config.json                                                                      

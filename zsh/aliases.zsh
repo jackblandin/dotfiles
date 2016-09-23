@@ -1,3 +1,4 @@
+alias jn="open -a Safari http://localhost:8888 && jupyter notebook --no-browser"
 alias ap-reload="apiary preview --server --port=9090"
 alias ap-test="api-mock ./apiary.apib"
 alias ap="~/.rbenv/versions/2.1.2/bin/apiary"
@@ -11,7 +12,7 @@ alias butss='bundle update trunkclub && ss'
 alias cc='clear'
 alias clearzlogs='sudo rm /private/var/log/asl/*.asl'
 alias desk='cd ~/Desktop'
-alias dotfiles='cd ~/dotfiles'
+alias dotfiles='cd ~/dotfiles && ts'
 alias dotz='. ~/.zshrc'
 alias fantasy_app='cd ~/my/fantasy/fantasy_app && ts -s'
 alias fantasy_svc='cd ~/my/fantasy/fantasy_svc && ts -s'
