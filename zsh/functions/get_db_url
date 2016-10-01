@@ -9,6 +9,7 @@ function get_db_url() {
   dev_db_urls[fs]="postgres://finance_svc:finance_svc@192.168.23.2:5432/postgres2"
   dev_db_urls[ms]="postgresql://members_svc:members_svc@postgres.trunkclub.dev:5432/postgres"
   dev_db_urls[nas]="postgres://nordstorm_availability_svc:nordstorm_availability_svc@postgres.trunkclub.dev:5432/postgres"
+  dev_db_urls[pr]="postgresql://price_svc:price_svc@postgres.trunkclub.dev:5432/price_svc"
   dev_db_urls[t]="postgres://diablo:diablo@postgres.trunkclub.dev:5432/diablo"
 
   declare -A stg_db_urls
@@ -19,6 +20,7 @@ function get_db_url() {
   stg_db_urls[nas]="postgres://nordstorm_availability_svc:l8,Up_ZQahwKtE2LLcWy@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[nws]="postgres://nordstrom_warehouse_svc:PPX_fa8P9McU:8nnQKMg@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[pas]="postgres://product_addresses_svc:RH3dLmCjuvdwWufjsciPxQPh2Ytwwghu@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
+  stg_db_urls[pr]="postgres://price_svc_user:KMaGjrKqkTnYqi94MRtCxQT@sql-mrc01-stg.crsgng5grivx.us-east-1.rds.amazonaws.com/price_svc"
   stg_db_urls[ship]="postgres://shipping_svc_staging_r:XCsCY0W_6Nf_Zh0CXxuj@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[sos]="postgres://sales_order_svc:5lN5IM_bKhNQh_T0ydX.@postgres-1.stg.aws1.trunkclub.systems:5432/postgres"
   stg_db_urls[t]="postgres://diablo:9iPFla159sk123diGQfvtE7mXWnov9@diablo-1.stg.aws1.trunkclub.systems:5432/diablo"

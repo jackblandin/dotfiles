@@ -1,4 +1,4 @@
-bind right:ctrl;cmd resize +10% +0
-bind left:ctrl;cmd  resize -10% +0
-bind up:ctrl;cmd    resize +0 -10%
-bind down:ctrl;cmd  resize +0 +10%
+bind l:alt;cmd resize +5% +0
+bind h:alt;cmd resize -5% +0
+bind k:alt;cmd resize +0 -5%
+bind j:alt;cmd resize +0 +5%

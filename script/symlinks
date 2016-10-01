@@ -2,4 +2,5 @@
 
 ln -s /Users/jackblandin/dotfiles/jdb_solarized_dark.vim /Users/JackBlandin/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/jdb_solarized_dark.vim
 ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
+ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/python/jupyter_notebook_config.py ~/.jupyter/jupyter_notebook_config.py
