@@ -18,3 +18,4 @@ export PATH="/Users/JackBlandin/miniconda2/bin:$PATH"
 
 # Data Science database config
 export DB_CONFIG=~/Desktop/data_science_demystified/config.json                                                                      
+export database_url="postgres://product_svc_user:bfUm4UFWBhdMaXFTYt6JmEr@sql-mrc01-prd.crsgng5grivx.us-east-1.rds.amazonaws.com/product_svc?pool=24"

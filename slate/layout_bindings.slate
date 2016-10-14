@@ -1,2 +1,3 @@
 bind [:ctrl;cmd ${leftTwoThird}
-bind ]:ctrl;cmd ${rightTwoThird}
+# bind ]:ctrl;cmd ${rightTwoThird}
+bind ]:ctrl;cmd ${rightThird}

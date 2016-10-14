@@ -1,4 +1,3 @@
-alias jn="open -a Safari http://localhost:8888 && jupyter notebook --no-browser"
 alias ap-reload="apiary preview --server --port=9090"
 alias ap-test="api-mock ./apiary.apib"
 alias ap="~/.rbenv/versions/2.1.2/bin/apiary"
@@ -24,6 +23,7 @@ alias gls='git ls-tree -r master --name-only'
 alias gpfl='. ~/dotfiles/zsh/scripts/git/git_push_force_with_lease.zsh'
 alias gpl='git_pretty_log' # special git log function in ~/dotfiles/zsh/functions/git_pretty_log
 alias grih='. ~/dotfiles/zsh/scripts/git/git_rebase_interactive_head.zsh'
+alias jn="open -a Safari http://localhost:8888 && jupyter notebook --no-browser"
 alias kk='~/dotfiles/zsh/scripts/tmux/kill_current_tmux_session'
 alias learn="cd ~/my/learning_web_apps"
 alias mlstan='cd ~/Desktop/ML-Stanford'
@@ -32,6 +32,11 @@ alias morning='. ~/dotfiles/zsh/scripts/tc/morning'
 alias my='cd ~/my'
 alias ngber='noglob bundle exec rake' # noglob fixes bug where args can't be passed in rake task
 alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
+alias nxreload="sudo nginx -s reload"
+alias nxstart="sudo nginx"
+alias nxstop="sudo nginx -s stop"
+alias nxtailacc="tail /usr/local/var/log/nginx/access.log"
+alias nxtailerr="/usr/local/var/log/nginx/error.log"
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstatus='pg_ctl -D /usr/local/var/postgres status'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'

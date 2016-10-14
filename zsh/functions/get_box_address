@@ -8,15 +8,19 @@ function get_box_address() {
   addr=
 
   declare -A stg_addresses
+  stg_addresses[cic]="mrc01.stg.aws1.trunkclub.systems"
   stg_addresses[fs]="bck01.stg.aws1.trunkclub.systems"
   stg_addresses[ia]="mrc01.stg.aws1.trunkclub.systems"
   stg_addresses[ms]="mbr01.stg.aws1.trunkclub.systems"
+  stg_addresses[pr]="mrc01.stg.aws1.trunkclub.systems"
   stg_addresses[sa]="sls01.stg.aws1.trunkclub.systems"
 
   declare -A prd_addresses
+  prd_addresses[cic]="mrc07.prd.aws1.trunkclub.systems"
   prd_addresses[fs]="bck01.prd.aws1.trunkclub.systems"
   prd_addresses[ia]="mrc03.prd.aws1.trunkclub.systems"
   prd_addresses[ms]="mbr01.prd.aws1.trunkclub.systems"
+  prd_addresses[pr]='mrc05.prd.aws1.trunkclub.systems'
   prd_addresses[sa]="sls01.prd.aws1.trunkclub.systems"
 
 
