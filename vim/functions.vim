@@ -39,3 +39,7 @@ function! RemoveCommaSpace()
 endfunction
 
 command! RC call RemoveCommaSpace()
+
+function! AlignRubyHash()
+  exe 'Tabularize/\(:.*\)\@<!:\zs /l0'
+endfunction
