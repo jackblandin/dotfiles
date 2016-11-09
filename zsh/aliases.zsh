@@ -43,6 +43,7 @@ alias nxvim="vim /usr/local/etc/nginx/nginx.conf"
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstatus='pg_ctl -D /usr/local/var/postgres status'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias pir='pip install -r requirements.txt'
 alias pks_go='/Users/JackBlandin/Go/src/github.com/trunkclub/postgres_to_kafka_go'
 alias sb='script/bundle'
 alias sc='script/console'

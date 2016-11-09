@@ -18,6 +18,8 @@ so ~/dotfiles/vim/maps/other.vim
 so ~/dotfiles/vim/maps/python.vim
 so ~/dotfiles/vim/macros.vim
 so ~/dotfiles/vim/appearence/syntax/go.vim
+so ~/dotfiles/vim/appearence/syntax/syntastic_overrides.vim
+so ~/dotfiles/vim/appearence/syntax/set_syntax_for_file_types.vim
 so ~/dotfiles/vim/sets.vim
 so ~/dotfiles/vim/other.vim
 so ~/dotfiles/vim/appearence/80_char_line.vim
