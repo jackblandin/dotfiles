@@ -1,6 +1,0 @@
-# vi: ft=zsh
-
-function build_tc_stg_box_address() {
-  local box_number=$1
-  echo "app$box_number.stg.aws1.trunkclub.systems"
-}
