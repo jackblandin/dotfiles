@@ -1,2 +1,4 @@
 *.overrides*
 tags
+zsh/functions/get_box_address
+zsh/functions/get_db_url
