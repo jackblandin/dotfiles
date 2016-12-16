@@ -47,6 +47,7 @@ alias pir='pip install -r requirements.txt'
 alias pks_go='/Users/JackBlandin/Go/src/github.com/trunkclub/postgres_to_kafka_go'
 alias sb='script/bundle'
 alias sc='script/console'
+alias scp="RACK_ENV=development bundle exec pry -r ./config/console"
 alias ss='script/server || script/dev'
 alias st='script/test --color --format documentation'
 alias stf='script/test --tag focus --color --format documentation'
