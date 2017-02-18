@@ -13,6 +13,7 @@ alias butss='bundle update trunkclub && ss'
 alias cc='clear'
 alias clearzlogs='sudo rm /private/var/log/asl/*.asl'
 alias desk='cd ~/Desktop'
+alias dglenv='source deactivate gl-env' #activates conda environment for graphlab
 alias dotfiles='cd ~/dotfiles && ts'
 alias dotz='. ~/.zshrc'
 alias fantasy_app='cd ~/my/fantasy/fantasy_app && ts -s'
