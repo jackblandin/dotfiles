@@ -1,3 +1,4 @@
 #! /bin/bash -e
 
 cd ~/dotfiles/repo_lib/ipython_memory_usage && python setup.py install && cd ~/dotfiles
+npm install -g js-beautify
