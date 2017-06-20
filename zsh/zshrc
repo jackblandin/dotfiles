@@ -1,6 +1,7 @@
 # TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 # { time ( source ~/dotfiles/zsh/exports.zsh ) } 2>&1
 
+source ~/dotfiles/zsh/private.zsh
 source ~/dotfiles/zsh/exports.zsh
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 source ~/dotfiles/zsh/theme.zsh

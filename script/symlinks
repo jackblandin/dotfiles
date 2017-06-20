@@ -5,3 +5,4 @@ ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/python/jupyter_notebook_config.py ~/.jupyter/jupyter_notebook_config.py
 ln -s ~/dotfiles/slate/slate ~/.slate
+ln -s ~/dotfiles/agignore ~/.agignore

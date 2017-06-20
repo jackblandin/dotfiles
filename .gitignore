@@ -4,3 +4,4 @@ zsh/functions/get_box_address
 zsh/functions/get_db_url
 zsh/functions/build_tc_prd_box_address
 zsh/functions/build_tc_stg_box_address
+zsh/private.zsh
