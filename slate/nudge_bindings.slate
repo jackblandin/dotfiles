@@ -1,4 +1,4 @@
-bind l:alt,shift;cmd nudge +50 +0
-bind h:alt,shift;cmd nudge -50 +0
-bind k:alt,shift;cmd nudge +0 -50
-bind j:alt,shift;cmd nudge +0 +50
+bind l:alt;cmd nudge +50 +0
+bind h:alt;cmd nudge -50 +0
+bind k:alt;cmd nudge +0 -50
+bind j:alt;cmd nudge +0 +50

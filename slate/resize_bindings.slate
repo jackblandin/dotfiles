@@ -1,4 +1,4 @@
-bind l:alt;cmd resize +5% +0
-bind h:alt;cmd resize -5% +0
-bind k:alt;cmd resize +0 -5%
-bind j:alt;cmd resize +0 +5%
+bind l:alt,shift;cmd resize +5% +0
+bind h:alt,shift;cmd resize -5% +0
+bind k:alt,shift;cmd resize +0 -5%
+bind j:alt,shift;cmd resize +0 +5%
