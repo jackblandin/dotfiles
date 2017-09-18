@@ -13,6 +13,7 @@ so ~/dotfiles/vim/commands.vim
 so ~/dotfiles/vim/maps/aligns.vim
 " so ~/dotfiles/vim/maps/auto_close.vim
 so ~/dotfiles/vim/maps/ctag_maps.vim
+so ~/dotfiles/vim/maps/fold.vim
 so ~/dotfiles/vim/maps/git_gutter_maps.vim
 so ~/dotfiles/vim/maps/buffer_swap_maps.vim
 so ~/dotfiles/vim/maps/other.vim

@@ -30,3 +30,8 @@ export DYLD_FALLBACK_LIBRARY_PATH=$HOME/miniconda2/lib/:$DYLD_FALLBACK_LIBRARY_P
 
 # Dropbox location
 export DROPBOX_HOME=~/Dropbox
+
+# TC Data Science
+export WORKON_HOME=/Users/JackBlandin/.virtualenvs
+export PROJECT_HOME=/Users/JackBlandin/Devel
+source /Users/JackBlandin/miniconda2/bin/virtualenvwrapper.sh 
