@@ -64,3 +64,6 @@ let s:p.normal.error = [ [ s:base2, s:red ] ]
 let s:p.normal.warning = [ [ s:base02, s:yellow ] ]
 
 let g:lightline#colorscheme#jdb_solarized_dark#palette = lightline#colorscheme#flatten(s:p)
+
+" " Set background color of folded lines
+" hi Folded ctermbg=243

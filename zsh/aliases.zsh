@@ -35,6 +35,7 @@ alias morning='. ~/dotfiles/zsh/scripts/tc/morning'
 alias my='cd ~/my'
 alias ngber='noglob bundle exec rake' # noglob fixes bug where args can't be passed in rake task
 alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
+alias nt='nosetests test'
 alias nxreload="sudo nginx -s reload"
 alias nxstart="sudo nginx"
 alias nxstop="sudo nginx -s stop"

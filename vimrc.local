@@ -26,3 +26,4 @@ so ~/dotfiles/vim/appearence/syntax/set_syntax_for_file_types.vim
 so ~/dotfiles/vim/appearence/80_char_line.vim
 so ~/dotfiles/vim/sets.vim
 so ~/dotfiles/vim/other.vim
+so ~/dotfiles/vim/custom_filetype_settings/python.vim
