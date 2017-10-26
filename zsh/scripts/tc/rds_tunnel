@@ -1,0 +1,9 @@
+# vi: ft=zsh
+
+svc=$1
+env=$2
+db_address=$(get_db_address $svc $env)
+box_address=$(get_box_address $svc $env)
+echo "db_address: $db_address"
+echo "box_address: $box_address"
+ssh -v -N -L 10010:$db_address:5432 jack@$box_address

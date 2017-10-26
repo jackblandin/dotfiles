@@ -4,4 +4,7 @@ zsh/functions/get_box_address
 zsh/functions/get_db_url
 zsh/functions/build_tc_prd_box_address
 zsh/functions/build_tc_stg_box_address
+zsh/functions/get_db_address
+zsh/functions/get_db_pass
+zsh/functions/get_tunnel_db_url
 zsh/private.zsh

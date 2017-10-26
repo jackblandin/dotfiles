@@ -1,0 +1,8 @@
+# vi: ft=zsh
+
+svc=$1
+env=$2
+tunnel_db_url=$(get_tunnel_db_url $svc $env)
+echo "tunnel_db_url: $tunnel_db_url"
+echo "pgcli $tunnel_db_url"
+pgcli $tunnel_db_url
