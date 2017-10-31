@@ -1,6 +1,11 @@
-node_modules
-public
-docs
-bin
-.vendor
-log
+*.log
+.vendor/
+bin/
+data/
+docs/
+log/
+logs/
+node_modules/
+public/
+venv/
+tags
