@@ -8,3 +8,4 @@ au BufRead,BufNewFile *.es6                           set filetype=javascript
 
 au BufRead,BufNewFile */dockerfiles/*/*.dev,/etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
 au BufRead,BufNewFile *nginx.conf if &ft == '' | setfiletype nginx | endif
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
