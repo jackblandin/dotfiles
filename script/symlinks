@@ -7,3 +7,4 @@ ln -s ~/dotfiles/python/jupyter_notebook_config.py ~/.jupyter/jupyter_notebook_c
 ln -s ~/dotfiles/slate/slate ~/.slate
 ln -s ~/dotfiles/agignore ~/.agignore
 ln -s ~/dotfiles/git/global_gitignore ~/.gitignore_global
+ln -s ~/dotfiles/karabiner ~/.config
