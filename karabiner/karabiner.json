@@ -1,4 +1,3 @@
-
 {
     "global": {
         "check_for_updates_on_startup": true,
@@ -19,6 +18,15 @@
                         "description": "JACK'S CUSTOM: Map Ctrl-w to Option-w to delete previous word",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.vim\\.",
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -46,6 +54,15 @@
                         "description": "JACK'S CUSTOM: (disable in iTerm2) Vi Mode [left_control + hjkl]",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.vim\\.",
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
@@ -66,18 +83,18 @@
                                         "key_code": "left_arrow"
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                      "type": "frontmost_application_unless",
-                                      "bundle_identifiers": [
-                                        "^org\\.vim\\.",
-                                        "^com\\.googlecode\\.iterm2$"
-                                      ]
-                                    }
-                                ],
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.vim\\.",
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
@@ -98,18 +115,18 @@
                                         "key_code": "down_arrow"
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                      "type": "frontmost_application_unless",
-                                      "bundle_identifiers": [
-                                        "^org\\.vim\\.",
-                                        "^com\\.googlecode\\.iterm2$"
-                                      ]
-                                    }
-                                ],
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.vim\\.",
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
@@ -130,18 +147,18 @@
                                         "key_code": "up_arrow"
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                      "type": "frontmost_application_unless",
-                                      "bundle_identifiers": [
-                                        "^org\\.vim\\.",
-                                        "^com\\.googlecode\\.iterm2$"
-                                      ]
-                                    }
-                                ],
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.vim\\.",
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
@@ -160,15 +177,6 @@
                                 "to": [
                                     {
                                         "key_code": "right_arrow"
-                                    }
-                                ],
-                                "conditions": [
-                                    {
-                                      "type": "frontmost_application_unless",
-                                      "bundle_identifiers": [
-                                        "^org\\.vim\\.",
-                                        "^com\\.googlecode\\.iterm2$"
-                                      ]
                                     }
                                 ],
                                 "type": "basic"
@@ -357,7 +365,16 @@
             ],
             "name": "Default profile",
             "selected": true,
-            "simple_modifications": [],
+            "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "left_control"
+                    },
+                    "to": {
+                        "key_code": "left_option"
+                    }
+                }
+            ],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 0,
@@ -366,4 +383,3 @@
         }
     ]
 }
-
