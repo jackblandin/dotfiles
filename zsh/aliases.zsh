@@ -35,7 +35,7 @@ alias morning='. ~/dotfiles/zsh/scripts/tc/morning'
 alias my='cd ~/my'
 alias ngber='noglob bundle exec rake' # noglob fixes bug where args can't be passed in rake task
 alias notes='cd ~/Google\ Drive/TC\ Desktop/notes'
-# alias notify="echo processed-finished"
+alias notify='. ~/dotfiles/zsh/scripts/notify_process_complete'
 alias nt='nosetests test'
 alias nxreload="sudo nginx -s reload"
 alias nxstart="sudo nginx"
@@ -56,7 +56,7 @@ alias st='script/test --color --format documentation'
 alias stf='script/test --tag focus --color --format documentation'
 alias stjs='script/test --no-color'
 alias sw='script/worker'
-alias tags='ctags -R --exclude=.bundle --exclude=.git --exclude=node_modules'
+alias tags='ctags -R --exclude=.bundle --exclude=.git --exclude=node_modules --exclude=@.ctagsignore'
 alias tc_ds_update='git+ssh://git@github.com/trunkclub/ds_tc@059892e39ff7d03faa071eecef04e4e6637be59d'
 alias tc_rds_tunnel='. ~/dotfiles/zsh/scripts/tc/tc_rds_tunnel'
 alias tcpgcli='. ~/dotfiles/zsh/scripts/tc/tcpgcli'

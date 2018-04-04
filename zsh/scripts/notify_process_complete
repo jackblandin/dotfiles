@@ -1,0 +1,3 @@
+#! /bin/bash -e
+
+osascript -e 'display notification "Process complete" with title "Manually triggered"'

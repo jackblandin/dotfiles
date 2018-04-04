@@ -11,3 +11,4 @@ venv/
 tags
 *bower_components/
 *libs/
+/Users/*/.rbenv

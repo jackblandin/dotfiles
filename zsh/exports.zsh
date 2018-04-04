@@ -36,4 +36,4 @@ export PROJECT_HOME=/Users/JackBlandin/Devel
 source /Users/JackBlandin/miniconda2/bin/virtualenvwrapper.sh
 
 # Postgres
-export DATABASE_URL=postgres://$(whoami)
+# export DATABASE_URL=postgres://$(whoami)
