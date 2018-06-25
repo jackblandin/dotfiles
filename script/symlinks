@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ln -s /Users/jackblandin/dotfiles/jdb_solarized_dark.vim /Users/JackBlandin/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/jdb_solarized_dark.vim
+ln -s ~/dotfiles/jdb_solarized_dark.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/jdb_solarized_dark.vim
 ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -s ~/dotfiles/python/jupyter_notebook_config.py ~/.jupyter/jupyter_notebook_config.py
@@ -8,3 +8,5 @@ ln -s ~/dotfiles/slate/slate ~/.slate
 ln -s ~/dotfiles/agignore ~/.agignore
 ln -s ~/dotfiles/git/global_gitignore ~/.gitignore_global
 ln -s ~/dotfiles/karabiner ~/.config
+ln -s ~/dotfiles/jackblandin.zsh-theme ~/.oh-my-zsh/themes/jackblandin.zsh-theme
+ln -s ~/dotfiles/vim/vimrc.local ~/.vimrc.local

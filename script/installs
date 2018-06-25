@@ -1,6 +1,15 @@
 #! /bin/bash -e
 
 cd ~/dotfiles/repo_lib/ipython_memory_usage && python setup.py install && cd ~/dotfiles
-npm install -g js-beautify
-sudo chown $USER ~/.config # allows user to write to this directory (needed for karabiner elements)
 
+# JS beautify
+npm install -g js-beautify
+
+# allows user to write to this directory (needed for karabiner elements)
+sudo chown $USER ~/.config 
+
+# powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1 && fonts/install.sh && rm -rf fonts
+
+# zprezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
