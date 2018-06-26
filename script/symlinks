@@ -9,4 +9,4 @@ ln -s ~/dotfiles/agignore ~/.agignore
 ln -s ~/dotfiles/git/global_gitignore ~/.gitignore_global
 ln -s ~/dotfiles/karabiner ~/.config
 ln -s ~/dotfiles/jackblandin.zsh-theme ~/.oh-my-zsh/themes/jackblandin.zsh-theme
-ln -s ~/dotfiles/vim/vimrc.local ~/.vimrc.local
+ln -s ~/dotfiles/tmux/tmux.conf.local ~/.tmux.conf.local
