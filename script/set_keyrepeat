@@ -1,4 +1,4 @@
 #! /bin/bash -e
 
-defaults write -g InitialKeyRepeat -int 40 # normal minimum is 16 (225 ms)
-defaults write -g KeyRepeat -int 3 # normal minimum is 2 (30 ms)
+defaults write -g InitialKeyRepeat -int 17 # normal minimum is 16 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)

@@ -2,7 +2,7 @@
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'evanmiller/nginx-vim-syntax'
+" Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'fatih/vim-go'
 Plugin 'godlygeek/tabular'
 Plugin 'itchyny/lightline.vim'

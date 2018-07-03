@@ -21,19 +21,14 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
 # Miniconda2 for Python
-export PATH="/Users/JackBlandin/miniconda2/bin:$PATH"
+# export PATH="/Users/JackBlandin/miniconda2/bin:$PATH"
 
 # Data Science database config
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/Cellar/openssl/1.0.2j/lib
-export DYLD_FALLBACK_LIBRARY_PATH=$HOME/miniconda2/lib/:$DYLD_FALLBACK_LIBRARY_PATH
+# export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/Cellar/openssl/1.0.2j/lib
+# export DYLD_FALLBACK_LIBRARY_PATH=$HOME/miniconda2/lib/:$DYLD_FALLBACK_LIBRARY_PATH
 
 # Dropbox location
 export DROPBOX_HOME=~/Dropbox
-
-# TC Data Science
-export WORKON_HOME=/Users/JackBlandin/.virtualenvs
-export PROJECT_HOME=/Users/JackBlandin/Devel
-source /Users/JackBlandin/miniconda2/bin/virtualenvwrapper.sh
 
 # Postgres
 # export DATABASE_URL=postgres://$(whoami)
