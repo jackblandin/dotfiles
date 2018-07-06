@@ -1,2 +1,2 @@
-# ZSH_THEME="jackblandin"
-ZSH_THEME="my-agnoster"
+ZSH_THEME="jackblandin"
+# ZSH_THEME="my-agnoster"
