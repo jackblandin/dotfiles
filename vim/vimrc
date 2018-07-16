@@ -114,7 +114,7 @@ endif
 vnoremap p "_dP
 
 " Go crazy!
-if filereadable(expand("~/dotfiles/vimrc.local"))
+if filereadable(expand("~/.vimrc.local"))
   " In your .vimrc.local, you might like:
   "
   " set autowrite
@@ -124,5 +124,5 @@ if filereadable(expand("~/dotfiles/vimrc.local"))
   "
   " autocmd! bufwritepost .vimrc source ~/.vimrc
   " noremap! jj <ESC>
-  source ~/dotfiles/vimrc.local
+  source ~/.vimrc.local
 endif
