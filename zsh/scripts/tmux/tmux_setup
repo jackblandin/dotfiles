@@ -80,3 +80,5 @@ if $start_server; then
 fi
 
 tmux attach-session -t "$name"
+
+tmux source-file ~/.tmux.conf
