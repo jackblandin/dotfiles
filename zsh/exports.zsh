@@ -10,9 +10,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:~/npm
 
 # NVM
-export NVM_DIR=~/.nvm
-export PATH=$PATH:~/nvm
-[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads NVM
+# export NVM_DIR=~/.nvm
+# export PATH=$PATH:~/nvm
+# [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads NVM
+ export NVM_DIR="$HOME/.nvm"
+ . "/usr/local/opt/nvm/nvm.sh"
 
 # Go PATH
 export GOPATH=$HOME/Go
