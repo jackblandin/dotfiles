@@ -5,6 +5,7 @@ endif
 so ~/dotfiles/vim/plugins.vim
 call vundle#end()
 
+so ~/dotfiles/vim/appearence/themes/jdb_solarized_dark.vim
 so ~/dotfiles/vim/appearence/color_scheme.vim
 so ~/dotfiles/vim/set_file_types.vim
 so ~/dotfiles/vim/file_type_overrides.vim

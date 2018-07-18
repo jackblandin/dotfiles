@@ -15,6 +15,7 @@ let s:cuicolors = {
       \ 'blue': [ '4', '33', 'DarkBlue' ],
       \ 'cyan': [ '6', '37', 'DarkCyan' ],
       \ 'green': [ '2', '64', 'DarkGreen' ],
+      \ 'slate': [ '3', '237', 'Grey23' ],
       \ }
 
 " The following condition only applies for the console and is the same
@@ -45,6 +46,8 @@ let s:violet = [ '#6c71c4', s:cuicolors.violet[s:cuiindex] ]
 let s:blue = [ '#268bd2', s:cuicolors.blue[s:cuiindex] ]
 let s:cyan = [ '#2aa198', s:cuicolors.cyan[s:cuiindex] ]
 let s:green = [ '#859900', s:cuicolors.green[s:cuiindex] ]
+" let s:slate = [ '#778899', s:cuicolors.slate[s:cuiindex] ]
+let s:slate = [ '#eeeeee', s:cuicolors.slate[s:cuiindex] ]
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 let s:p.normal.left = [ [ s:base3, s:blue ], [ s:base3, s:base01 ] ]
@@ -56,9 +59,9 @@ let s:p.replace.left = [ [ s:base3, s:red ], [ s:base3, s:base01 ] ]
 let s:p.visual.left = [ [ s:base3, s:magenta ], [ s:base3, s:base01 ] ]
 let s:p.normal.middle = [ [ s:base1, s:base02 ] ]
 let s:p.inactive.middle = [ [ s:base0, s:base02 ] ]
-let s:p.tabline.left = [ [ s:base2, s:base01 ] ]
-let s:p.tabline.tabsel = [ [ s:base2, s:cyan ] ]
-let s:p.tabline.middle = [ [ s:base01, s:base2 ] ]
+let s:p.tabline.left = [ [ s:base3, s:base01 ] ]
+let s:p.tabline.tabsel = [ [ s:base03, s:cyan ] ]
+let s:p.tabline.middle = [ [ s:base3, s:slate ] ]
 let s:p.tabline.right = copy(s:p.normal.right)
 let s:p.normal.error = [ [ s:base2, s:red ] ]
 let s:p.normal.warning = [ [ s:base02, s:yellow ] ]
