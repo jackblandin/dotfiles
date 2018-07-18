@@ -1,7 +1,5 @@
 #! /bin/bash -e
 
-tmux source-file ~/.tmux.conf
-
 tmux_window_names=("manager" "server" "edit" "test"  "dev" "stg" "workers" "prod" "kafka_worker")
 tmux_window_names_length=${#tmux_window_names[@]}
 git_pull=false
