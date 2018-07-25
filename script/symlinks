@@ -16,3 +16,5 @@ ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/dotfiles/vim/vimrc.local ~/.vimrc.local
 
 ln -s ~/dotfiles/vim/jdb_solarized_dark.vim /usr/share/vim/vim80/colors/jdb_solarized_dark.vim
+
+ln -s ~/dotfiles/python/jupyter_custom.css ~/.jupyter/custom/custom.css # .jupyter/custom directory must be created manually
