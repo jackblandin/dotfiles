@@ -8,3 +8,4 @@ zsh/functions/get_db_address
 zsh/functions/get_db_pass
 zsh/functions/get_tunnel_db_url
 zsh/private.zsh
+**/DS_Store
