@@ -33,3 +33,6 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+
+# OPAM configuration
+. /Users/jblandin/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
