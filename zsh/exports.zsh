@@ -34,3 +34,6 @@ export DROPBOX_HOME=~/Dropbox
 
 # Postgres
 # export DATABASE_URL=postgres://$(whoami)
+
+# GoHealth MLflow
+export MLFLOW_HOME=$HOME/Desktop/mlflow

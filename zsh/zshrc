@@ -12,6 +12,7 @@ source ~/dotfiles/zsh/zshrc.overrides.zsh
 # source $(brew --prefix nvm)/nvm.sh ** THIS SLOWS DOWN STARTUP A LOT
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/zsh/evals.zsh
+source /Users/jblandin/miniconda3/bin/activate
 
 plugins=(git)
 
@@ -36,3 +37,4 @@ fi
 
 # OPAM configuration
 . /Users/jblandin/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"

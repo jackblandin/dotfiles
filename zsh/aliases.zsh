@@ -27,6 +27,7 @@ alias gpfl='. ~/dotfiles/zsh/scripts/git/git_push_force_with_lease.zsh'
 alias gpl='git_pretty_log' # special git log function in ~/dotfiles/zsh/functions/git_pretty_log
 alias grih='. ~/dotfiles/zsh/scripts/git/git_rebase_interactive_head.zsh'
 alias jn="open -a Safari http://localhost:8888 && jupyter notebook --no-browser"
+alias julia='exec "/Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia"'
 alias kk='~/dotfiles/zsh/scripts/tmux/kill_current_tmux_session'
 alias learn="cd ~/my/learning_web_apps"
 alias mlstan='cd ~/Desktop/ML-Stanford'

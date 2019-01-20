@@ -1,0 +1,7 @@
+# vi: ft=zsh
+
+# Create an ipython kernel for a particular conda env
+function create_conda_ipykernel() {
+  local env_name=$1
+  python -m ipykernel install --user --name $env_name --display-name "Python conda ($env_name)"
+}

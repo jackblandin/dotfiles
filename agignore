@@ -12,3 +12,4 @@ tags
 *bower_components/
 *libs/
 /Users/*/.rbenv
+*.class
