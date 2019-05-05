@@ -37,3 +37,13 @@ export DROPBOX_HOME=~/Dropbox
 
 # GoHealth MLflow
 export MLFLOW_HOME=$HOME/Desktop/mlflow
+
+# Add MIKTeX to PATH
+export PATH=$PATH:$HOME/bin
+
+# Android SDK
+export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+export PATH=$PATH:$HOME/Library/Android/sdk/tools
+
+# autopep8
+export PATH=$PATH:/usr/local/bin/autopep8

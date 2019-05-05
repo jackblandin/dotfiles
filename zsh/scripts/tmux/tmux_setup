@@ -48,6 +48,13 @@ for (( i=1; i<tmux_window_names_length; i++ )); do
   tmux new-window -n "${tmux_window_names[$i]}"
 done
 
+
+tmux select-window -t 1
+tmux send-keys "conda activate $name" Enter
+
+tmux select-window -t 2
+tmux send-keys "conda activate $name" Enter
+
 tmux select-window -t 6
 tmux send-keys "cat Capfile" Enter
 
