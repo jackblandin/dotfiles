@@ -1,2 +1,4 @@
 bind ;:ctrl       focus 'Google Chrome'
 bind ;:ctrl;shift hide  'Google Chrome'
+bind 5:ctrl       focus 'SQLPro for MSSQL'
+bind 5:ctrl;shift hide  'SQLPro for MSSQL'
