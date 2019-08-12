@@ -1,20 +1,21 @@
 #! /bin/bash
 
-ln -s ~/dotfiles/themes/agnoster.zsh-theme ~/.oh-my-zsh/themes/my-agnoster.zsh-theme
-ln -s ~/dotfiles/jdb_solarized_dark.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/jdb_solarized_dark.vim
-ln -s ~/dotfiles/zsh/zshenv ~/.zshenv
-ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
-ln -s ~/dotfiles/python/jupyter_notebook_config.py ~/.jupyter/jupyter_notebook_config.py
-ln -s ~/dotfiles/slate/slate ~/.slate
-ln -s ~/dotfiles/agignore ~/.agignore
-ln -s ~/dotfiles/git/global_gitignore ~/.gitignore_global
-ln -s ~/dotfiles/karabiner ~/.config
-ln -s ~/dotfiles/jackblandin.zsh-theme ~/.oh-my-zsh/themes/jackblandin.zsh-theme
-ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/tmux/tmux.conf.local ~/.tmux.conf.local
-ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-ln -s ~/dotfiles/vim/vimrc.local ~/.vimrc.local
+ln -sf ~/dotfiles/themes/agnoster.zsh-theme ~/.oh-my-zsh/themes/my-agnoster.zsh-theme
+ln -sf ~/dotfiles/jdb_solarized_dark.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/jdb_solarized_dark.vim
+ln -sf ~/dotfiles/zsh/zshenv ~/.zshenv
+ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -sf ~/dotfiles/python/jupyter_notebook_config.py ~/.jupyter/jupyter_notebook_config.py
+ln -sf ~/dotfiles/slate/slate ~/.slate
+ln -sf ~/dotfiles/agignore ~/.agignore
+ln -sf ~/dotfiles/git/global_gitignore ~/.gitignore_global
+ln -sf ~/dotfiles/karabiner ~/.config
+ln -sf ~/dotfiles/jackblandin.zsh-theme ~/.oh-my-zsh/themes/jackblandin.zsh-theme
+ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/tmux/tmux.conf.local ~/.tmux.conf.local
+ln -sf ~/dotfiles/vim/vimrc ~/.vimrc
+ln -sf ~/dotfiles/vim/vimrc.local ~/.vimrc.local
 
-ln -s ~/dotfiles/vim/jdb_solarized_dark.vim /usr/share/vim/vim80/colors/jdb_solarized_dark.vim
+ln -sf ~/dotfiles/vim/jdb_solarized_dark.vim /usr/share/vim/vim80/colors/jdb_solarized_dark.vim
 
-ln -s ~/dotfiles/python/jupyter_custom.css ~/.jupyter/custom/custom.css # .jupyter/custom directory must be created manually
+ln -sf ~/dotfiles/python/jupyter_custom.css ~/.jupyter/custom/custom.css # .jupyter/custom directory must be created manually
+ln -sf ~/dotfiles/slate/slate ~/.slate

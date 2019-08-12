@@ -22,8 +22,8 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
-# Miniconda2 for Python
-# export PATH="/Users/JackBlandin/miniconda2/bin:$PATH"
+# Miniconda3 for Python
+export PATH="$HOME/miniconda3/bin:$PATH"
 
 # Data Science database config
 # export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/Cellar/openssl/1.0.2j/lib
