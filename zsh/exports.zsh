@@ -35,9 +35,6 @@ export DROPBOX_HOME=~/Dropbox
 # Postgres
 # export DATABASE_URL=postgres://$(whoami)
 
-# GoHealth MLflow
-export MLFLOW_HOME=$HOME/Desktop/mlflow
-
 # Add MIKTeX to PATH
 export PATH=$PATH:$HOME/bin
 
