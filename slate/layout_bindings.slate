@@ -1,16 +1,18 @@
-bind [:ctrl;cmd ${leftTwoThird}
-bind ]:ctrl;cmd ${rightTwoThird}
+bind g:ctrl,cmd ${leftHalf}
+bind ':ctrl,cmd ${rightHalf}
 
-bind [:ctrl,shift;cmd ${leftThird}
-bind ]:ctrl,shift;cmd ${rightThird}
+bind [:ctrl;cmd ${leftThreeFourth}
+bind ]:ctrl;cmd ${rightThreeFourth}
+bind [:ctrl,shift;cmd ${leftFourth}
+bind ]:ctrl,shift;cmd ${rightFourth}
+
+bind o:ctrl,cmd ${leftTwoThird}
+bind p:ctrl,cmd ${rightTwoThird}
+bind o:ctrl,shift,cmd ${leftThird}
+bind p:ctrl,shift,cmd ${rightThird}
 
 bind ;:ctrl,shift;cmd ${middleThird}
 
 bind ,:ctrl,cmd ${full}
-
-bind g:ctrl,cmd ${leftHalf}
-bind g:ctrl,shift,cmd ${leftFourth}
-bind ':ctrl,cmd ${rightHalf}
-bind ':ctrl,shift,cmd ${rightFourth}
 
 bind ;:ctrl,cmd move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY
