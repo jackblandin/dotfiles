@@ -12,7 +12,7 @@ source ~/dotfiles/zsh/zshrc.overrides.zsh
 # source $(brew --prefix nvm)/nvm.sh ** THIS SLOWS DOWN STARTUP A LOT
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/zsh/evals.zsh
-source ~/miniconda3/bin/activate
+# source ~/miniconda3/bin/activate  # commented out by conda initialize
 
 plugins=(git)
 
@@ -38,3 +38,19 @@ fi
 # OPAM configuration
 . /Users/jblandin/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/jb846j/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/jb846j/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/jb846j/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/jb846j/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

@@ -44,3 +44,13 @@ export PATH=$PATH:$HOME/Library/Android/sdk/tools
 
 # autopep8
 export PATH=$PATH:/usr/local/bin/autopep8
+
+
+# Added when trying to install Python 3.6 using pyenv and encountered an error.
+# https://stackoverflow.com/questions/66482346/problems-installing-python-3-6-with-pyenv-on-mac-os-big-sur
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"

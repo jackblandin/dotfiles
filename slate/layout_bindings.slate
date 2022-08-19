@@ -16,3 +16,8 @@ bind ;:ctrl,shift;cmd ${middleThird}
 bind ,:ctrl,cmd ${full}
 
 bind ;:ctrl,cmd move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY
+
+bind y:ctrl,cmd ${topLeft}
+bind u:ctrl,cmd ${topRight}
+bind n:ctrl,cmd ${bottomLeft}
+bind .:ctrl,cmd ${bottomRight}
