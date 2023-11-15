@@ -1,7 +1,9 @@
 # export DOCKER_HOST=tcp://192.168.23.2:2375
 export PATH="$HOME/.rbenv/bin:$PATH" # Add ~/.rbenv/bin to your $PATH for access to the rbenv command-line utility.
-export EDITOR=/usr/local/bin/vim
-export VISUAL=/usr/local/bin/vim
+export EDITOR=/Users/jackblandin/bin/vim
+export VISUAL=/Users/jackblandin/bin/vim
+# export EDITOR=/usr/local/bin/vim
+# export VISUAL=/usr/local/bin/vim
 export LOG_FORMAT="colored"
 export ZSH=$HOME/.oh-my-zsh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -10,11 +12,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:~/npm
 
 # NVM
-# export NVM_DIR=~/.nvm
-# export PATH=$PATH:~/nvm
-# [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads NVM
- export NVM_DIR="$HOME/.nvm"
- . "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR=~/.nvm
+export PATH=$PATH:~/nvm
+[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads NVM
+ # export NVM_DIR="$HOME/.nvm"
+ # . "/usr/local/opt/nvm/nvm.sh"
 
 # Go PATH
 export GOPATH=$HOME/Go
@@ -48,9 +50,12 @@ export PATH=$PATH:/usr/local/bin/autopep8
 
 # Added when trying to install Python 3.6 using pyenv and encountered an error.
 # https://stackoverflow.com/questions/66482346/problems-installing-python-3-6-with-pyenv-on-mac-os-big-sur
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+# export PATH="$HOME/.pyenv/bin:$PATH"
+# export PATH="/usr/local/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+# export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+# export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+
+# Added when struggling to install powerline-shell
+export PATH=$PATH:$HOME/Library/Python/3.9/bin/powerline-shell
